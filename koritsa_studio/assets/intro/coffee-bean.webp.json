@@ -1,0 +1,8 @@
+{
+  "prompt": "Use case: product-mockup. Asset type: transparent photographic sprite for an animated coffeehouse website intro. Primary request: one single sumptuous roasted coffee bean, macro studio photography. Genuinely transparent background. The one bean is centered, fully visible, occupies 70 percent of a square canvas, upright with a slightly diagonal deep natural central fissure. Saturated warm chestnut, espresso and caramel brown with small rich copper highlights; real roasted surface with tiny pores, delicate oily sheen, tactile texture, elegant soft key light from upper left, realistic full depth and plump shape. No ground plane, no cast shadow beyond the object, no plate, no coffee, no scattered objects, no other bean, no text, no logo, no border. This is an isolated realistic object to be rotated and animated in code, not a composition or a UI mockup. Sharp clean alpha edges. Sophisticated food advertising photography, not a vector icon or cartoon.\n",
+  "createdAt": "2026-10-10T20:24:33.541Z",
+  "tool": "built-in image_gen",
+  "source": "/Users/dmitrygordeev/.codex/generated_images/01a125f8-1c04-7292-aa68-79c208da29b8/exec-de418843-ecea-47be-ba90-11083601b79d.png",
+  "use": "Decorative coffee bean; not a menu item or claim about origin",
+  "processing": "cwebp quality 86, resized to 448×448 with alpha preserved"
+}

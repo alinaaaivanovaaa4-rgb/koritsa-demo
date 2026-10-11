@@ -1,0 +1,1124 @@
+{
+  "categories": [
+    {
+      "id": "breakfast",
+      "title": "Завтраки"
+    },
+    {
+      "id": "salads",
+      "title": "Салаты"
+    },
+    {
+      "id": "hot",
+      "title": "Горячие блюда"
+    },
+    {
+      "id": "soups",
+      "title": "Супы"
+    },
+    {
+      "id": "desserts",
+      "title": "Десерты"
+    },
+    {
+      "id": "drinks",
+      "title": "Напитки"
+    }
+  ],
+  "items": [
+    {
+      "id": "cherry-syrniki",
+      "category": "breakfast",
+      "title": "Сырники с вишней",
+      "price": 380,
+      "weight": 380,
+      "description": "Сырники собственного производства, с греческим йогуртом и вишнёвым конфи.",
+      "image": "syrniki-catalog",
+      "group": null,
+      "gallery": [
+        {
+          "src": "assets/photographer/syrniki-catalog-960.webp",
+          "srcset": "assets/photographer/syrniki-catalog-480.webp 480w, assets/photographer/syrniki-catalog-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "02 белые/alimpro-2014.jpg"
+        },
+        {
+          "src": "assets/photographer/syrniki-scene-960.webp",
+          "srcset": "assets/photographer/syrniki-scene-480.webp 480w, assets/photographer/syrniki-scene-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "01 фото/alimpro-2001.jpg"
+        },
+        {
+          "src": "assets/photographer/syrniki-detail-960.webp",
+          "srcset": "assets/photographer/syrniki-detail-480.webp 480w, assets/photographer/syrniki-detail-960.webp 960w",
+          "width": 960,
+          "height": 1440,
+          "original": "01 фото/alimpro-2026.jpg"
+        }
+      ]
+    },
+    {
+      "id": "rice-porridge",
+      "category": "breakfast",
+      "title": "Рисовая каша",
+      "price": 250,
+      "weight": 380,
+      "description": "Молоко, кокосовое молоко, клубника, банан, сливочное масло.",
+      "image": null,
+      "group": null
+    },
+    {
+      "id": "oat-porridge",
+      "category": "breakfast",
+      "title": "Овсяная каша",
+      "price": 250,
+      "weight": 380,
+      "description": "Молоко, кокосовое молоко, клубника, банан, сливочное масло.",
+      "image": null,
+      "group": null
+    },
+    {
+      "id": "salmon-pancakes",
+      "category": "breakfast",
+      "title": "Блинчики с сёмгой и икрой",
+      "price": 420,
+      "weight": 380,
+      "description": "Блины, слабосолёная сёмга, сливочно-творожный крем с тёртыми огурцами.",
+      "image": null,
+      "group": null
+    },
+    {
+      "id": "salmon-draniki",
+      "category": "breakfast",
+      "title": "Драники с сёмгой",
+      "price": 460,
+      "weight": 360,
+      "description": "Картофельные драники, слабосолёная сёмга, сметана с хреном, яйцо пашот.",
+      "image": null,
+      "group": null
+    },
+    {
+      "id": "shakshuka",
+      "category": "breakfast",
+      "title": "Шакшука",
+      "price": 380,
+      "weight": 380,
+      "description": "Яйца пашот, классический йогурт, семена льна, кинза, турецкая лепёшка.",
+      "image": null,
+      "group": null
+    },
+    {
+      "id": "turkish-breakfast",
+      "category": "breakfast",
+      "title": "Турецкий завтрак",
+      "price": 480,
+      "weight": 400,
+      "description": "Каша на основе сулугуни и кукурузной муки с допами из хумуса, свежих овощей, ореховый соус, турецкой лепёшкой и яйцами в смятку.",
+      "image": "breakfast-scene",
+      "group": null,
+      "gallery": [
+        {
+          "src": "assets/photographer/breakfast-scene-960.webp",
+          "srcset": "assets/photographer/breakfast-scene-480.webp 480w, assets/photographer/breakfast-scene-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "01 фото/alimpro-1294.jpg"
+        },
+        {
+          "src": "assets/photographer/breakfast-mobile-960.webp",
+          "srcset": "assets/photographer/breakfast-mobile-480.webp 480w, assets/photographer/breakfast-mobile-960.webp 960w",
+          "width": 960,
+          "height": 1441,
+          "original": "01 фото/alimpro-1293.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-turkish-breakfast-alimpro-1301-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-turkish-breakfast-alimpro-1301-480.webp 480w, assets/photographer/galleries/gallery-turkish-breakfast-alimpro-1301-960.webp 960w",
+          "width": 960,
+          "height": 1440,
+          "original": "01 фото/alimpro-1301.jpg"
+        }
+      ]
+    },
+    {
+      "id": "mountain-breakfast",
+      "category": "breakfast",
+      "title": "Горский завтрак",
+      "price": 400,
+      "weight": 380,
+      "description": "Яйца в смятку в сливочно-манном соусе, с копчёным сыром и лепёшкой.",
+      "image": null,
+      "group": null
+    },
+    {
+      "id": "english-breakfast",
+      "category": "breakfast",
+      "title": "Английский завтрак",
+      "price": 470,
+      "weight": 400,
+      "description": "Глазунья с тонкими чесночными колбасками, сырные шарики на основе творожного сыра, фасоль в соусе мутти и микс салатов.",
+      "image": "english-scene",
+      "group": null,
+      "gallery": [
+        {
+          "src": "assets/photographer/english-scene-960.webp",
+          "srcset": "assets/photographer/english-scene-480.webp 480w, assets/photographer/english-scene-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "01 фото/alimpro-1317.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-english-breakfast-alimpro-1310-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-english-breakfast-alimpro-1310-480.webp 480w, assets/photographer/galleries/gallery-english-breakfast-alimpro-1310-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "01 фото/alimpro-1310.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-english-breakfast-alimpro-1320-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-english-breakfast-alimpro-1320-480.webp 480w, assets/photographer/galleries/gallery-english-breakfast-alimpro-1320-960.webp 960w",
+          "width": 960,
+          "height": 1440,
+          "original": "01 фото/alimpro-1320.jpg"
+        }
+      ]
+    },
+    {
+      "id": "shrimp-caesar",
+      "category": "salads",
+      "title": "Цезарь с креветками",
+      "price": 480,
+      "weight": 400,
+      "description": "Айсберг, пекинская капуста, креветки, черри, соус собственного производства.",
+      "image": null,
+      "group": null
+    },
+    {
+      "id": "chicken-caesar",
+      "category": "salads",
+      "title": "Цезарь с курицей",
+      "price": 390,
+      "weight": 400,
+      "description": "Айсберг, пекинская капуста, курица, черри, соус собственного производства, перепелиные яйца, пармезан.",
+      "image": null,
+      "group": null
+    },
+    {
+      "id": "chicken-stracciatella",
+      "category": "salads",
+      "title": "Салат с куриным филе и страчателлой",
+      "price": 450,
+      "weight": 400,
+      "description": "Куриное филе с розовыми помидорами, красным луком, опятами со страчателлой и горчичным соусом.",
+      "image": "gallery-chicken-stracciatella-alimpro-1105",
+      "group": null,
+      "gallery": [
+        {
+          "src": "assets/photographer/galleries/gallery-chicken-stracciatella-alimpro-1105-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-chicken-stracciatella-alimpro-1105-480.webp 480w, assets/photographer/galleries/gallery-chicken-stracciatella-alimpro-1105-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "02 белые/alimpro-1105.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-chicken-stracciatella-alimpro-1064-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-chicken-stracciatella-alimpro-1064-480.webp 480w, assets/photographer/galleries/gallery-chicken-stracciatella-alimpro-1064-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "01 фото/alimpro-1064.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-chicken-stracciatella-alimpro-1119-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-chicken-stracciatella-alimpro-1119-480.webp 480w, assets/photographer/galleries/gallery-chicken-stracciatella-alimpro-1119-960.webp 960w",
+          "width": 960,
+          "height": 1440,
+          "original": "01 фото/alimpro-1119.jpg"
+        }
+      ]
+    },
+    {
+      "id": "chicken-nut-salad",
+      "category": "salads",
+      "title": "Салат с куриным филе и ореховым соусом",
+      "price": 420,
+      "weight": 400,
+      "description": "Куриное филе с ореховым соусом на основе кешью, с сезонными фруктами, черри, киноа и миксом салатов.",
+      "image": "chicken-fruit-catalog",
+      "group": null,
+      "gallery": [
+        {
+          "src": "assets/photographer/chicken-fruit-catalog-960.webp",
+          "srcset": "assets/photographer/chicken-fruit-catalog-480.webp 480w, assets/photographer/chicken-fruit-catalog-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "02 белые/alimpro-1103.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-chicken-nut-salad-alimpro-1066-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-chicken-nut-salad-alimpro-1066-480.webp 480w, assets/photographer/galleries/gallery-chicken-nut-salad-alimpro-1066-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "01 фото/alimpro-1066.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-chicken-nut-salad-alimpro-1115-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-chicken-nut-salad-alimpro-1115-480.webp 480w, assets/photographer/galleries/gallery-chicken-nut-salad-alimpro-1115-960.webp 960w",
+          "width": 960,
+          "height": 1440,
+          "original": "01 фото/alimpro-1115.jpg"
+        }
+      ]
+    },
+    {
+      "id": "shrimp-avocado",
+      "category": "salads",
+      "title": "Салат с креветками и авокадо",
+      "price": 450,
+      "weight": 400,
+      "description": "Тигровые креветки, микс салатов, помидоры черри, спелый манго, авокадо и киноа в соусе тархун с подачей соуса шрипс.",
+      "image": "shrimp-catalog",
+      "group": null,
+      "gallery": [
+        {
+          "src": "assets/photographer/shrimp-catalog-960.webp",
+          "srcset": "assets/photographer/shrimp-catalog-480.webp 480w, assets/photographer/shrimp-catalog-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "02 белые/alimpro-1039.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-shrimp-avocado-alimpro-1016-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-shrimp-avocado-alimpro-1016-480.webp 480w, assets/photographer/galleries/gallery-shrimp-avocado-alimpro-1016-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "01 фото/alimpro-1016.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-shrimp-avocado-alimpro-1120-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-shrimp-avocado-alimpro-1120-480.webp 480w, assets/photographer/galleries/gallery-shrimp-avocado-alimpro-1120-960.webp 960w",
+          "width": 960,
+          "height": 1440,
+          "original": "01 фото/alimpro-1120.jpg"
+        }
+      ]
+    },
+    {
+      "id": "green-salad",
+      "category": "salads",
+      "title": "Зелёный салат",
+      "price": 420,
+      "weight": 400,
+      "description": "Бобы эдамаме с брокколи, миксом салатов, киноа, авокадо, творожными шариками в тыквенных семенах, маринованными огурцами собственного приготовления в кунжутном соусе и соусе тархун.",
+      "image": "gallery-green-salad-alimpro-1001",
+      "group": null,
+      "gallery": [
+        {
+          "src": "assets/photographer/galleries/gallery-green-salad-alimpro-1001-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-green-salad-alimpro-1001-480.webp 480w, assets/photographer/galleries/gallery-green-salad-alimpro-1001-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "02 белые/alimpro-1001.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-green-salad-alimpro-1008-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-green-salad-alimpro-1008-480.webp 480w, assets/photographer/galleries/gallery-green-salad-alimpro-1008-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "01 фото/alimpro-1008.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-green-salad-alimpro-1118-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-green-salad-alimpro-1118-480.webp 480w, assets/photographer/galleries/gallery-green-salad-alimpro-1118-960.webp 960w",
+          "width": 960,
+          "height": 1440,
+          "original": "01 фото/alimpro-1118.jpg"
+        }
+      ]
+    },
+    {
+      "id": "greek-salad",
+      "category": "salads",
+      "title": "Греческий салат",
+      "price": 400,
+      "weight": 400,
+      "description": "Огурцы, розовые помидоры, болгарский перец, оливки гриль, каперсы, красный лук, микс салатов в греческом соусе с брынзой.",
+      "image": "greek-catalog",
+      "group": null,
+      "gallery": [
+        {
+          "src": "assets/photographer/greek-catalog-960.webp",
+          "srcset": "assets/photographer/greek-catalog-480.webp 480w, assets/photographer/greek-catalog-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "02 белые/alimpro-1107.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-greek-salad-alimpro-1109-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-greek-salad-alimpro-1109-480.webp 480w, assets/photographer/galleries/gallery-greek-salad-alimpro-1109-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "01 фото/alimpro-1109.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-greek-salad-alimpro-1145-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-greek-salad-alimpro-1145-480.webp 480w, assets/photographer/galleries/gallery-greek-salad-alimpro-1145-960.webp 960w",
+          "width": 960,
+          "height": 1440,
+          "original": "01 фото/alimpro-1145.jpg"
+        }
+      ]
+    },
+    {
+      "id": "crispy-eggplant",
+      "category": "salads",
+      "title": "Салат с хрустящими баклажанами",
+      "price": 420,
+      "weight": 400,
+      "description": "Хрустящие баклажаны в кунжутном соусе с розовыми помидорами, сырными шариками на основе творожного сыра и микс салатов.",
+      "image": "eggplant-catalog",
+      "group": null,
+      "gallery": [
+        {
+          "src": "assets/photographer/eggplant-catalog-960.webp",
+          "srcset": "assets/photographer/eggplant-catalog-480.webp 480w, assets/photographer/eggplant-catalog-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "02 белые/alimpro-1041.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-crispy-eggplant-alimpro-1047-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-crispy-eggplant-alimpro-1047-480.webp 480w, assets/photographer/galleries/gallery-crispy-eggplant-alimpro-1047-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "01 фото/alimpro-1047.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-crispy-eggplant-alimpro-1116-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-crispy-eggplant-alimpro-1116-480.webp 480w, assets/photographer/galleries/gallery-crispy-eggplant-alimpro-1116-960.webp 960w",
+          "width": 960,
+          "height": 1440,
+          "original": "01 фото/alimpro-1116.jpg"
+        }
+      ]
+    },
+    {
+      "id": "chicken-fettuccine",
+      "category": "hot",
+      "title": "Фетучини с курицей и грибами",
+      "price": 440,
+      "weight": 400,
+      "description": "Паста фетучини, курица, шампиньоны, соус песто, лук репчатый, чеснок, сливочный соус, пармезан.",
+      "image": null,
+      "group": null
+    },
+    {
+      "id": "shrimp-orzo",
+      "category": "hot",
+      "title": "Орзо с креветками",
+      "price": 550,
+      "weight": 400,
+      "description": "Паста орзо в томатном соусе и сливочном соусе песто с морепродуктами, вялеными томатами и брокколи.",
+      "image": "orzo-catalog",
+      "group": null,
+      "gallery": [
+        {
+          "src": "assets/photographer/orzo-catalog-960.webp",
+          "srcset": "assets/photographer/orzo-catalog-480.webp 480w, assets/photographer/orzo-catalog-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "02 белые/alimpro-1214.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-shrimp-orzo-alimpro-1208-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-shrimp-orzo-alimpro-1208-480.webp 480w, assets/photographer/galleries/gallery-shrimp-orzo-alimpro-1208-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "01 фото/alimpro-1208.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-shrimp-orzo-alimpro-1212-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-shrimp-orzo-alimpro-1212-480.webp 480w, assets/photographer/galleries/gallery-shrimp-orzo-alimpro-1212-960.webp 960w",
+          "width": 960,
+          "height": 1441,
+          "original": "01 фото/alimpro-1212.jpg"
+        }
+      ]
+    },
+    {
+      "id": "chicken-curry",
+      "category": "hot",
+      "title": "Курочка в соусе карри",
+      "price": 430,
+      "weight": 400,
+      "description": "Куриное филе, яблочный уксус, терияки, рис, шпинат, сливочное масло, сливки, молоко кокосовое, паста карри, зелёное масло.",
+      "image": "gallery-chicken-curry-alimpro-1153",
+      "group": null,
+      "gallery": [
+        {
+          "src": "assets/photographer/galleries/gallery-chicken-curry-alimpro-1153-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-chicken-curry-alimpro-1153-480.webp 480w, assets/photographer/galleries/gallery-chicken-curry-alimpro-1153-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "02 белые/alimpro-1153.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-chicken-curry-alimpro-1136-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-chicken-curry-alimpro-1136-480.webp 480w, assets/photographer/galleries/gallery-chicken-curry-alimpro-1136-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "01 фото/alimpro-1136.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-chicken-curry-alimpro-1157-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-chicken-curry-alimpro-1157-480.webp 480w, assets/photographer/galleries/gallery-chicken-curry-alimpro-1157-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "01 фото/alimpro-1157.jpg"
+        }
+      ]
+    },
+    {
+      "id": "chicken-sweet-potato",
+      "category": "hot",
+      "title": "Куриное филе с пюре из батата",
+      "price": 490,
+      "weight": 400,
+      "description": "Филе в соусе терияки с шампиньонами, свежим шпинатом с пюре из батата в сливочном соусе.",
+      "image": "chicken-batat-catalog",
+      "group": null,
+      "gallery": [
+        {
+          "src": "assets/photographer/chicken-batat-catalog-960.webp",
+          "srcset": "assets/photographer/chicken-batat-catalog-480.webp 480w, assets/photographer/chicken-batat-catalog-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "02 белые/alimpro-1159.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-chicken-sweet-potato-alimpro-1161-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-chicken-sweet-potato-alimpro-1161-480.webp 480w, assets/photographer/galleries/gallery-chicken-sweet-potato-alimpro-1161-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "01 фото/alimpro-1161.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-chicken-sweet-potato-alimpro-1169-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-chicken-sweet-potato-alimpro-1169-480.webp 480w, assets/photographer/galleries/gallery-chicken-sweet-potato-alimpro-1169-960.webp 960w",
+          "width": 960,
+          "height": 1440,
+          "original": "01 фото/alimpro-1169.jpg"
+        }
+      ]
+    },
+    {
+      "id": "almond-salmon",
+      "category": "hot",
+      "title": "Стейк сёмги в миндальной корочке",
+      "price": 860,
+      "weight": 400,
+      "description": "Стейк сёмги в миндальных хлопьях в сливочно-устричном соусе, с кускусом и вялеными томатами на кабачке.",
+      "image": "salmon-catalog",
+      "group": null,
+      "gallery": [
+        {
+          "src": "assets/photographer/salmon-catalog-960.webp",
+          "srcset": "assets/photographer/salmon-catalog-480.webp 480w, assets/photographer/salmon-catalog-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "02 белые/alimpro-1184.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-almond-salmon-alimpro-1171-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-almond-salmon-alimpro-1171-480.webp 480w, assets/photographer/galleries/gallery-almond-salmon-alimpro-1171-960.webp 960w",
+          "width": 960,
+          "height": 641,
+          "original": "01 фото/alimpro-1171.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-almond-salmon-alimpro-1182-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-almond-salmon-alimpro-1182-480.webp 480w, assets/photographer/galleries/gallery-almond-salmon-alimpro-1182-960.webp 960w",
+          "width": 960,
+          "height": 1440,
+          "original": "01 фото/alimpro-1182.jpg"
+        }
+      ]
+    },
+    {
+      "id": "seafood-spaghetti",
+      "category": "hot",
+      "title": "Спагетти с морепродуктами",
+      "price": 520,
+      "weight": 400,
+      "description": "Спагетти в томатном соусе мутти и шпинат с морепродуктами.",
+      "image": "spaghetti-catalog",
+      "group": null,
+      "gallery": [
+        {
+          "src": "assets/photographer/spaghetti-catalog-960.webp",
+          "srcset": "assets/photographer/spaghetti-catalog-480.webp 480w, assets/photographer/spaghetti-catalog-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "02 белые/alimpro-1242.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-seafood-spaghetti-alimpro-1233-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-seafood-spaghetti-alimpro-1233-480.webp 480w, assets/photographer/galleries/gallery-seafood-spaghetti-alimpro-1233-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "01 фото/alimpro-1233.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-seafood-spaghetti-alimpro-1249-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-seafood-spaghetti-alimpro-1249-480.webp 480w, assets/photographer/galleries/gallery-seafood-spaghetti-alimpro-1249-960.webp 960w",
+          "width": 960,
+          "height": 1440,
+          "original": "01 фото/alimpro-1249.jpg"
+        }
+      ]
+    },
+    {
+      "id": "chicken-roast",
+      "category": "hot",
+      "title": "Жаркое с курицей и грибами",
+      "price": 430,
+      "weight": 400,
+      "description": "Курица с картофелем, шампиньонами и болгарским перцем в сливочном соусе с добавлением соуса кочи и лепёшкой.",
+      "image": "roast-catalog",
+      "group": null,
+      "gallery": [
+        {
+          "src": "assets/photographer/roast-catalog-960.webp",
+          "srcset": "assets/photographer/roast-catalog-480.webp 480w, assets/photographer/roast-catalog-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "02 белые/alimpro-1186.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-chicken-roast-alimpro-1187-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-chicken-roast-alimpro-1187-480.webp 480w, assets/photographer/galleries/gallery-chicken-roast-alimpro-1187-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "01 фото/alimpro-1187.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-chicken-roast-alimpro-1203-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-chicken-roast-alimpro-1203-480.webp 480w, assets/photographer/galleries/gallery-chicken-roast-alimpro-1203-960.webp 960w",
+          "width": 960,
+          "height": 1440,
+          "original": "01 фото/alimpro-1203.jpg"
+        }
+      ]
+    },
+    {
+      "id": "tom-yam",
+      "category": "soups",
+      "title": "Суп Том Ям",
+      "price": 650,
+      "weight": 400,
+      "description": "Бульон, кокосовое молоко, морепродукты, шампиньоны, рис, лайм.",
+      "image": "tom-yam",
+      "group": null
+    },
+    {
+      "id": "chicken-soup",
+      "category": "soups",
+      "title": "Суп куриный",
+      "price": 320,
+      "weight": 400,
+      "description": "Куриный бульон, морковь, лапша, курица, перепелиные яйца, укроп, чиабатта.",
+      "image": null,
+      "group": null
+    },
+    {
+      "id": "lentil-soup",
+      "category": "soups",
+      "title": "Суп чечевичный",
+      "price": 320,
+      "weight": 400,
+      "description": "Суп из красной чечевицы, с тыквенными семенами и красным маслом.",
+      "image": "lentil-catalog",
+      "group": null,
+      "gallery": [
+        {
+          "src": "assets/photographer/lentil-catalog-960.webp",
+          "srcset": "assets/photographer/lentil-catalog-480.webp 480w, assets/photographer/lentil-catalog-960.webp 960w",
+          "width": 960,
+          "height": 640,
+          "original": "02 белые/alimpro-2017.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-lentil-soup-alimpro-2008-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-lentil-soup-alimpro-2008-480.webp 480w, assets/photographer/galleries/gallery-lentil-soup-alimpro-2008-960.webp 960w",
+          "width": 960,
+          "height": 641,
+          "original": "01 фото/alimpro-2008.jpg"
+        },
+        {
+          "src": "assets/photographer/galleries/gallery-lentil-soup-alimpro-2033-960.webp",
+          "srcset": "assets/photographer/galleries/gallery-lentil-soup-alimpro-2033-480.webp 480w, assets/photographer/galleries/gallery-lentil-soup-alimpro-2033-960.webp 960w",
+          "width": 960,
+          "height": 1440,
+          "original": "01 фото/alimpro-2033.jpg"
+        }
+      ]
+    },
+    {
+      "id": "sweet-pancakes",
+      "category": "desserts",
+      "title": "Блинчики",
+      "price": 420,
+      "weight": 400,
+      "description": "С бананом и ягодами, с добавлением шоколада.",
+      "image": null,
+      "group": null
+    },
+    {
+      "id": "chocolate-waffle",
+      "category": "desserts",
+      "title": "Вафля",
+      "price": 420,
+      "weight": 340,
+      "description": "С бельгийским шоколадом, ягодами и мороженым.",
+      "image": null,
+      "group": null
+    },
+    {
+      "id": "dubai-cheesecake",
+      "category": "desserts",
+      "title": "Дубайский чизкейк",
+      "price": 390,
+      "weight": 260,
+      "description": "Чизкейк с тестом катаифи, бельгийским шоколадом и фисташковой пастой.",
+      "image": null,
+      "group": null
+    },
+    {
+      "id": "pancake-burrata",
+      "category": "desserts",
+      "title": "Блинный буррата",
+      "price": 430,
+      "weight": 370,
+      "description": "Блинный мешочек с йогуртовым кремом и ягодами.",
+      "image": null,
+      "group": null
+    },
+    {
+      "id": "cherry-waffle",
+      "category": "desserts",
+      "title": "Вафля",
+      "price": 360,
+      "weight": 340,
+      "description": "С творожной массой и вишнёвым вареньем.",
+      "image": null,
+      "group": null
+    },
+    {
+      "id": "espresso",
+      "category": "drinks",
+      "title": "Эспрессо",
+      "price": 170,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Кофе и горячие напитки"
+    },
+    {
+      "id": "americano",
+      "category": "drinks",
+      "title": "Американо",
+      "price": 170,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Кофе и горячие напитки"
+    },
+    {
+      "id": "flat",
+      "category": "drinks",
+      "title": "Флэт",
+      "price": 220,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Кофе и горячие напитки"
+    },
+    {
+      "id": "cappuccino",
+      "category": "drinks",
+      "title": "Капучино",
+      "price": [
+        200,
+        230
+      ],
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Кофе и горячие напитки"
+    },
+    {
+      "id": "latte",
+      "category": "drinks",
+      "title": "Латте",
+      "price": [
+        200,
+        230
+      ],
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Кофе и горячие напитки"
+    },
+    {
+      "id": "raf",
+      "category": "drinks",
+      "title": "Раф",
+      "price": [
+        250,
+        270
+      ],
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Кофе и горячие напитки"
+    },
+    {
+      "id": "cocoa",
+      "category": "drinks",
+      "title": "Какао",
+      "price": [
+        200,
+        250
+      ],
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Кофе и горячие напитки"
+    },
+    {
+      "id": "hot-chocolate",
+      "category": "drinks",
+      "title": "Горячий шоколад",
+      "price": [
+        200,
+        270
+      ],
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Кофе и горячие напитки"
+    },
+    {
+      "id": "mochaccino",
+      "category": "drinks",
+      "title": "Мокачино",
+      "price": [
+        200,
+        230
+      ],
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Кофе и горячие напитки"
+    },
+    {
+      "id": "raf-urbech",
+      "category": "drinks",
+      "title": "Раф с урбечом",
+      "price": 270,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Кофе и горячие напитки"
+    },
+    {
+      "id": "raf-halva",
+      "category": "drinks",
+      "title": "Раф с халвой",
+      "price": 270,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Кофе и горячие напитки"
+    },
+    {
+      "id": "raf-peanut",
+      "category": "drinks",
+      "title": "Арахисовый раф",
+      "price": 270,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Кофе и горячие напитки"
+    },
+    {
+      "id": "frappuccino",
+      "category": "drinks",
+      "title": "Фраппучино",
+      "price": 350,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Холодные напитки"
+    },
+    {
+      "id": "snow-leopard",
+      "category": "drinks",
+      "title": "Снежный барс",
+      "price": 350,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Холодные напитки"
+    },
+    {
+      "id": "iced-latte",
+      "category": "drinks",
+      "title": "Айс-латте",
+      "price": 250,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Холодные напитки"
+    },
+    {
+      "id": "iced-matcha",
+      "category": "drinks",
+      "title": "Айс-матча",
+      "price": 250,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Холодные напитки"
+    },
+    {
+      "id": "bumble",
+      "category": "drinks",
+      "title": "Бамбл",
+      "price": 300,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Холодные напитки"
+    },
+    {
+      "id": "bumble-fresh",
+      "category": "drinks",
+      "title": "Бамбл на фреше",
+      "price": 350,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Холодные напитки"
+    },
+    {
+      "id": "milkshake",
+      "category": "drinks",
+      "title": "Молочный коктейль",
+      "price": 350,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Холодные напитки"
+    },
+    {
+      "id": "espresso-tonic",
+      "category": "drinks",
+      "title": "Эспрессо-тоник",
+      "price": 250,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Холодные напитки"
+    },
+    {
+      "id": "assam",
+      "category": "drinks",
+      "title": "Ассам (чёрный)",
+      "price": [
+        100,
+        300
+      ],
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Чай"
+    },
+    {
+      "id": "sencha",
+      "category": "drinks",
+      "title": "Сенча (зелёный)",
+      "price": [
+        100,
+        300
+      ],
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Чай"
+    },
+    {
+      "id": "earl-grey",
+      "category": "drinks",
+      "title": "Эрл Грей",
+      "price": [
+        100,
+        350
+      ],
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Чай"
+    },
+    {
+      "id": "da-hong-pao",
+      "category": "drinks",
+      "title": "Дахунпай",
+      "price": [
+        100,
+        350
+      ],
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Чай"
+    },
+    {
+      "id": "sea-buckthorn",
+      "category": "drinks",
+      "title": "Облепиховый",
+      "price": [
+        200,
+        400
+      ],
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Чай"
+    },
+    {
+      "id": "pomegranate-raspberry",
+      "category": "drinks",
+      "title": "Гранат-малина",
+      "price": [
+        200,
+        400
+      ],
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Чай"
+    },
+    {
+      "id": "aloe-kiwi",
+      "category": "drinks",
+      "title": "Алоэ-киви",
+      "price": [
+        200,
+        400
+      ],
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Чай"
+    },
+    {
+      "id": "brazilian",
+      "category": "drinks",
+      "title": "Бразильский",
+      "price": 300,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Лимонады"
+    },
+    {
+      "id": "mojito",
+      "category": "drinks",
+      "title": "Мохито",
+      "price": 300,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Лимонады"
+    },
+    {
+      "id": "kiwi-apple",
+      "category": "drinks",
+      "title": "Киви-яблоко",
+      "price": 300,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Лимонады"
+    },
+    {
+      "id": "dates",
+      "category": "drinks",
+      "title": "Финиковый",
+      "price": 350,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Смузи"
+    },
+    {
+      "id": "cherry-lime",
+      "category": "drinks",
+      "title": "Вишнёвый лайм",
+      "price": 350,
+      "weight": null,
+      "description": "",
+      "image": null,
+      "group": "Смузи"
+    }
+  ],
+  "locations": [
+    {
+      "id": "svobody-183",
+      "address": "Свободы, 183",
+      "route": "https://yandex.ru/maps/?mode=routes&rtext=~%D0%9F%D1%80%D0%BE%D1%85%D0%BB%D0%B0%D0%B4%D0%BD%D1%8B%D0%B9%2C%20%D0%A1%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D1%8B%2C%20183&rtt=auto"
+    },
+    {
+      "id": "svobody-107",
+      "address": "Свободы, 107",
+      "route": "https://yandex.ru/maps/?mode=routes&rtext=~%D0%9F%D1%80%D0%BE%D1%85%D0%BB%D0%B0%D0%B4%D0%BD%D1%8B%D0%B9%2C%20%D0%A1%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D1%8B%2C%20107&rtt=auto"
+    },
+    {
+      "id": "karl-marx-32",
+      "address": "Карла Маркса, 32",
+      "route": "https://yandex.ru/maps/?mode=routes&rtext=~%D0%9F%D1%80%D0%BE%D1%85%D0%BB%D0%B0%D0%B4%D0%BD%D1%8B%D0%B9%2C%20%D0%9A%D0%B0%D1%80%D0%BB%D0%B0%20%D0%9C%D0%B0%D1%80%D0%BA%D1%81%D0%B0%2C%2032&rtt=auto"
+    },
+    {
+      "id": "lenina-104",
+      "address": "Ленина, 104/1",
+      "route": "https://yandex.ru/maps/?mode=routes&rtext=~%D0%9F%D1%80%D0%BE%D1%85%D0%BB%D0%B0%D0%B4%D0%BD%D1%8B%D0%B9%2C%20%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B0%2C%20104/1&rtt=auto"
+    }
+  ],
+  "media": {
+    "hero": {
+      "image": "breakfast-scene",
+      "alt": "Турецкий завтрак в «Корице»: яйца, лепёшка, овощи и соусы на белой тарелке",
+      "position": "50% 53%",
+      "video": null,
+      "mobileImage": "breakfast-mobile"
+    },
+    "featuredSyrniki": {
+      "image": "syrniki-scene",
+      "alt": "Сырники с вишнёвым конфи и йогуртом на белой рельефной тарелке",
+      "position": "50% 50%"
+    },
+    "sharedTable": {
+      "image": "shared-table",
+      "mobileImage": "shared-table-mobile",
+      "alt": "Шесть салатов «Корицы» на деревянном столе",
+      "position": "50% 50%"
+    },
+    "syrnikiDetail": {
+      "image": "syrniki-detail",
+      "alt": "Крупный план сырников с вишнёвым конфи",
+      "position": "50% 50%"
+    }
+  }
+}

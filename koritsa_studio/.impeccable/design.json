@@ -1,0 +1,374 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-10T18:36:46.910626+00:00",
+  "title": "Design System: Корица — студийная версия",
+  "extensions": {
+    "colorMeta": {
+      "cream": {
+        "role": "neutral",
+        "displayName": "Кремовая бумага",
+        "tonalRamp": [
+          "oklch(15% 0.01576 102.818)",
+          "oklch(26% 0.01576 102.818)",
+          "oklch(38% 0.01576 102.818)",
+          "oklch(49% 0.01576 102.818)",
+          "oklch(60% 0.01576 102.818)",
+          "oklch(72% 0.01576 102.818)",
+          "oklch(83% 0.01576 102.818)",
+          "oklch(95% 0.01576 102.818)"
+        ]
+      },
+      "olive": {
+        "role": "secondary",
+        "displayName": "Оливковый",
+        "tonalRamp": [
+          "oklch(15% 0.05294 141.996)",
+          "oklch(26% 0.05294 141.996)",
+          "oklch(38% 0.05294 141.996)",
+          "oklch(49% 0.05294 141.996)",
+          "oklch(60% 0.05294 141.996)",
+          "oklch(72% 0.05294 141.996)",
+          "oklch(83% 0.05294 141.996)",
+          "oklch(95% 0.05294 141.996)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Тёмная олива",
+        "tonalRamp": [
+          "oklch(15% 0.04260 139.956)",
+          "oklch(26% 0.04260 139.956)",
+          "oklch(38% 0.04260 139.956)",
+          "oklch(49% 0.04260 139.956)",
+          "oklch(60% 0.04260 139.956)",
+          "oklch(72% 0.04260 139.956)",
+          "oklch(83% 0.04260 139.956)",
+          "oklch(95% 0.04260 139.956)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Приглушённая олива",
+        "tonalRamp": [
+          "oklch(15% 0.03979 134.755)",
+          "oklch(26% 0.03979 134.755)",
+          "oklch(38% 0.03979 134.755)",
+          "oklch(49% 0.03979 134.755)",
+          "oklch(60% 0.03979 134.755)",
+          "oklch(72% 0.03979 134.755)",
+          "oklch(83% 0.03979 134.755)",
+          "oklch(95% 0.03979 134.755)"
+        ]
+      },
+      "orange": {
+        "role": "primary",
+        "displayName": "Корица",
+        "tonalRamp": [
+          "oklch(15% 0.13133 47.741)",
+          "oklch(26% 0.13133 47.741)",
+          "oklch(38% 0.13133 47.741)",
+          "oklch(49% 0.13133 47.741)",
+          "oklch(60% 0.13133 47.741)",
+          "oklch(72% 0.13133 47.741)",
+          "oklch(83% 0.13133 47.741)",
+          "oklch(95% 0.13133 47.741)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Общий разделитель",
+        "tonalRamp": [
+          "oklch(15% 0.02798 120.601)",
+          "oklch(26% 0.02798 120.601)",
+          "oklch(38% 0.02798 120.601)",
+          "oklch(49% 0.02798 120.601)",
+          "oklch(60% 0.02798 120.601)",
+          "oklch(72% 0.02798 120.601)",
+          "oklch(83% 0.02798 120.601)",
+          "oklch(95% 0.02798 120.601)"
+        ]
+      },
+      "sage": {
+        "role": "secondary",
+        "displayName": "Светлый шалфей",
+        "tonalRamp": [
+          "oklch(15% 0.01750 117.296)",
+          "oklch(26% 0.01750 117.296)",
+          "oklch(38% 0.01750 117.296)",
+          "oklch(49% 0.01750 117.296)",
+          "oklch(60% 0.01750 117.296)",
+          "oklch(72% 0.01750 117.296)",
+          "oklch(83% 0.01750 117.296)",
+          "oklch(95% 0.01750 117.296)"
+        ]
+      },
+      "location-line": {
+        "role": "neutral",
+        "displayName": "Разделитель адресов",
+        "tonalRamp": [
+          "oklch(15% 0.03382 132.364)",
+          "oklch(26% 0.03382 132.364)",
+          "oklch(38% 0.03382 132.364)",
+          "oklch(49% 0.03382 132.364)",
+          "oklch(60% 0.03382 132.364)",
+          "oklch(72% 0.03382 132.364)",
+          "oklch(83% 0.03382 132.364)",
+          "oklch(95% 0.03382 132.364)"
+        ]
+      },
+      "photo-neutral": {
+        "role": "neutral",
+        "displayName": "Нейтральное фотополе",
+        "tonalRamp": [
+          "oklch(15% 0.01350 102.036)",
+          "oklch(26% 0.01350 102.036)",
+          "oklch(38% 0.01350 102.036)",
+          "oklch(49% 0.01350 102.036)",
+          "oklch(60% 0.01350 102.036)",
+          "oklch(72% 0.01350 102.036)",
+          "oklch(83% 0.01350 102.036)",
+          "oklch(95% 0.01350 102.036)"
+        ]
+      },
+      "photo-warm": {
+        "role": "neutral",
+        "displayName": "Тёплое фотополе",
+        "tonalRamp": [
+          "oklch(15% 0.04302 74.284)",
+          "oklch(26% 0.04302 74.284)",
+          "oklch(38% 0.04302 74.284)",
+          "oklch(49% 0.04302 74.284)",
+          "oklch(60% 0.04302 74.284)",
+          "oklch(72% 0.04302 74.284)",
+          "oklch(83% 0.04302 74.284)",
+          "oklch(95% 0.04302 74.284)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Главный заголовок; responsive-переопределения описаны в Layout."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Основные заголовки разделов."
+      },
+      "story-title": {
+        "displayName": "Story title",
+        "purpose": "Заголовки редакционных глав."
+      },
+      "menu-display": {
+        "displayName": "Menu display",
+        "purpose": "Заголовок самостоятельной страницы меню."
+      },
+      "menu-category": {
+        "displayName": "Menu category",
+        "purpose": "Заголовки категорий меню."
+      },
+      "item-title": {
+        "displayName": "Item title",
+        "purpose": "Название блюда или напитка в открытой строке."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Основной текст."
+      },
+      "story-body": {
+        "displayName": "Story body",
+        "purpose": "Описание блюда; ограничение строки 34ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Навигация и подчёркнутые действия."
+      },
+      "action-label": {
+        "displayName": "Action label",
+        "purpose": "Основное действие рядом с круглой стрелкой."
+      },
+      "detail-label": {
+        "displayName": "Detail label",
+        "purpose": "Раскрытие состава."
+      },
+      "phone-label": {
+        "displayName": "Phone label",
+        "purpose": "Компактная категория и мобильная нижняя панель."
+      }
+    },
+    "shadows": [
+      {
+        "name": "search-focus-line",
+        "value": "0 1px 0 var(--orange)",
+        "purpose": "Тонкая линия focus-within поиска; система не использует карточные тени."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Общая кривая состояния и смены фотографии."
+      },
+      {
+        "name": "interaction",
+        "value": ".2s",
+        "purpose": "Короткие переходы стрелок и интерактивных состояний."
+      },
+      {
+        "name": "index-and-dock",
+        "value": ".25s",
+        "purpose": "Строка оглавления и нижняя мобильная панель."
+      },
+      {
+        "name": "story-photo",
+        "value": ".65s",
+        "purpose": "Смена закреплённой фотографии."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop-max",
+        "value": "1279px"
+      },
+      {
+        "name": "enhanced-story-min",
+        "value": "1000px"
+      },
+      {
+        "name": "ordinary-story-max",
+        "value": "999px"
+      },
+      {
+        "name": "expanded-navigation-min",
+        "value": "768px"
+      },
+      {
+        "name": "phone-max",
+        "value": "767px"
+      },
+      {
+        "name": "narrow-phone-max",
+        "value": "359px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Основная ссылка",
+      "kind": "button",
+      "refersTo": "primary-link",
+      "description": "Текстовое действие рядом с заполненной круглой стрелкой; исходный вариант героя и сброса поиска.",
+      "html": "<a class=\"ds-primary-link\" href=\"#menu\">Смотреть меню<span><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></span></a>",
+      "css": ".ds-primary-link{display:inline-flex;align-items:center;gap:22px;font:500 16px/1.2 Onest,sans-serif;color:var(--ink);text-decoration:none;white-space:nowrap;padding:0;border:0;background:none;}.ds-primary-link>span{width:48px;height:48px;border-radius:50%;background:var(--orange);color:var(--cream);display:grid;place-items:center;transition:background .2s var(--ease),transform .2s var(--ease);}.ds-primary-link:hover>span{background:var(--ink);transform:translateX(3px);}.ds-primary-link:focus-visible{outline:2px solid var(--orange);outline-offset:7px;}.ds-icon{width:24px;height:24px;flex:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}@media(max-width:767px){.ds-primary-link{font-size:15px;gap:20px;}.ds-primary-link>span{width:42px;height:42px;}}@media(prefers-reduced-motion:reduce){.ds-primary-link>span{transition:none;}}"
+    },
+    {
+      "name": "Подчёркнутая ссылка",
+      "kind": "button",
+      "refersTo": "text-link",
+      "description": "Открытое текстовое действие в истории блюда; стрелка реагирует на наведение.",
+      "html": "<a class=\"ds-text-link\" href=\"#menu\">Посмотреть в меню <svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></a>",
+      "css": ".ds-text-link{display:inline-flex;align-items:center;gap:18px;border-bottom:1px solid currentColor;padding-bottom:8px;font:500 16px/1.5 Onest,sans-serif;color:var(--ink);text-decoration:none;}.ds-text-link .ds-icon{width:22px;height:22px;transition:transform .2s var(--ease);}.ds-text-link:hover .ds-icon{transform:translateX(4px);}.ds-text-link:focus-visible{outline:2px solid var(--orange);outline-offset:5px;}.ds-icon{width:24px;height:24px;flex:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}@media(max-width:999px){.ds-text-link{font-size:14px;}}@media(prefers-reduced-motion:reduce){.ds-text-link .ds-icon{transition:none;}}"
+    },
+    {
+      "name": "Круглая ссылка",
+      "kind": "button",
+      "refersTo": "round-link",
+      "description": "Обведённая стрелка переводит от фотографии к следующему разделу.",
+      "html": "<a class=\"ds-round-link\" href=\"#food\" aria-label=\"Перейти к историям блюд\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></a>",
+      "css": ".ds-round-link{width:52px;height:52px;border:1px solid var(--olive);border-radius:50%;display:grid;place-items:center;background:transparent;color:var(--ink);transition:background .2s,color .2s;}.ds-round-link .ds-icon{transform:rotate(90deg);}.ds-round-link:hover{background:var(--olive);color:var(--cream);}.ds-round-link:focus-visible{outline:2px solid var(--orange);outline-offset:5px;}.ds-icon{width:24px;height:24px;flex:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}@media(max-width:767px){.ds-round-link{width:44px;height:44px;}}@media(prefers-reduced-motion:reduce){.ds-round-link{transition:none;}}"
+    },
+    {
+      "name": "Главная навигация",
+      "kind": "nav",
+      "description": "Кремовая строка ссылок с подчёркнутой текущей страницей и SVG маршрута.",
+      "html": "<nav class=\"ds-site-nav\" aria-label=\"Главная навигация\"><a href=\"#menu\" aria-current=\"page\">Меню</a><a href=\"#food\">Наши блюда</a><a href=\"#locations\">Кофейни <svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a></nav>",
+      "css": ".ds-site-nav{display:flex;align-items:center;gap:32px;background:var(--cream);color:var(--ink);font:400 16px/1.5 Onest,sans-serif;}.ds-site-nav a{display:flex;align-items:center;gap:8px;font-weight:500;padding:14px 0;color:inherit;text-decoration:none;text-underline-offset:5px;}.ds-site-nav a:hover,.ds-site-nav a[aria-current]{text-decoration:underline;}.ds-site-nav a:focus-visible{outline:2px solid var(--orange);outline-offset:5px;}.ds-site-nav .ds-icon{width:19px;height:19px;}.ds-icon{width:24px;height:24px;flex:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}@media(max-width:1279px){.ds-site-nav{gap:24px;}}@media(max-width:767px){.ds-site-nav{flex-direction:column;align-items:stretch;gap:0;padding:16px 20px 24px;border-bottom:1px solid var(--line);}.ds-site-nav a{font-size:24px;justify-content:space-between;padding:12px 0;}}"
+    },
+    {
+      "name": "Категории меню",
+      "kind": "nav",
+      "refersTo": "category-link",
+      "description": "Активная ссылка на оливковом поле; компактные экраны показывают горизонтальную прокручиваемую полосу.",
+      "html": "<nav class=\"ds-category-nav\" aria-label=\"Категории меню\"><a class=\"ds-category-link ds-is-active\" href=\"#menu\" aria-current=\"true\">Всё меню<span>64</span></a><a class=\"ds-category-link\" href=\"#breakfast\">Завтраки<span>9</span></a><a class=\"ds-category-link\" href=\"#drinks\">Напитки<span>32</span></a></nav>",
+      "css": ".ds-category-nav{display:flex;flex-direction:column;gap:2px;background:var(--cream);color:var(--ink);font:400 16px/1.5 Onest,sans-serif;}.ds-category-link{display:flex;align-items:center;gap:16px;justify-content:space-between;padding:13px 14px;font-weight:500;border-radius:3px;color:inherit;text-decoration:none;transition:background .2s;}.ds-category-link>span{font-size:12px;font-weight:400;font-variant-numeric:tabular-nums;}.ds-category-link:hover{background:var(--sage);}.ds-category-link.ds-is-active{background:var(--olive);color:var(--cream);}.ds-category-link:focus-visible{outline:2px solid var(--orange);outline-offset:5px;}@media(max-width:999px){.ds-category-link{font-size:14px;padding:12px;}}@media(max-width:767px){.ds-category-nav{flex-direction:row;gap:4px;overflow-x:auto;padding:12px var(--gutter);border-block:1px solid var(--line);scrollbar-width:none;}.ds-category-nav::-webkit-scrollbar{display:none;}.ds-category-link{flex:none;white-space:nowrap;font-size:13px;padding:10px 12px;gap:12px;}.ds-category-link>span{font-size:11px;}}@media(prefers-reduced-motion:reduce){.ds-category-link{transition:none;}}"
+    },
+    {
+      "name": "Поиск меню",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "Нижняя линия, оранжевый индикатор фокуса и отдельная кнопка очистки.",
+      "html": "<form class=\"ds-menu-search\" role=\"search\"><label class=\"ds-search-label\" for=\"ds-menu-query\">Поиск по всем блюдам и напиткам</label><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\"/><path d=\"m16 16 5 5\"/></svg><input id=\"ds-menu-query\" type=\"search\" placeholder=\"Блюдо или ингредиент\" autocomplete=\"off\"><button class=\"ds-search-clear\" type=\"reset\" aria-label=\"Очистить поиск\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"m6 6 12 12M6 18 18 6\"/></svg></button></form>",
+      "css": ".ds-menu-search{display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--olive);width:min(480px,100%);padding:14px 0;color:var(--ink);font:400 16px/1.5 Onest,sans-serif;}.ds-search-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;}.ds-menu-search input{font:inherit;color:inherit;border:0;background:transparent;width:100%;min-width:0;font-size:18px;outline:0;padding:0 4px;caret-color:var(--orange);}.ds-menu-search input::placeholder{color:var(--muted);opacity:1;}.ds-menu-search:focus-within{border-color:var(--orange);box-shadow:0 1px 0 var(--orange);}.ds-menu-search input::-webkit-search-cancel-button{display:none;}.ds-search-clear{border:0;background:transparent;color:inherit;display:grid;place-items:center;width:32px;height:32px;flex:none;margin:-4px 0;padding:4px;cursor:pointer;}.ds-search-clear:focus-visible{outline:2px solid var(--orange);outline-offset:5px;}.ds-icon{width:24px;height:24px;flex:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}@media(max-width:767px){.ds-menu-search{padding:13px 0;}.ds-menu-search input{font-size:16px;}.ds-menu-search>.ds-icon{width:21px;height:21px;}}"
+    },
+    {
+      "name": "Открытая строка меню",
+      "kind": "custom",
+      "refersTo": "menu-row",
+      "description": "Реальная позиция без фотографии: название, цена, вес и нативное раскрытие состава.",
+      "html": "<article class=\"ds-menu-row\" tabindex=\"-1\"><div class=\"ds-item-copy\"><div class=\"ds-item-heading\"><h3>Рисовая каша</h3><span class=\"ds-item-price\">250 ₽</span></div><span class=\"ds-item-weight\">380 г</span><details><summary>Состав <svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></summary><p>Молоко, кокосовое молоко, клубника, банан, сливочное масло.</p></details></div></article>",
+      "css": ".ds-menu-row{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0;display:flex;gap:24px;align-items:flex-start;color:var(--ink);font:400 16px/1.5 Onest,sans-serif;}.ds-menu-row:focus{outline:2px solid var(--orange);outline-offset:7px;}.ds-item-copy{flex:1;min-width:0;}.ds-item-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;}.ds-item-heading h3{margin:0;font-size:24px;line-height:1.3;letter-spacing:-.02em;font-weight:500;text-wrap:balance;}.ds-item-price{font-size:20px;line-height:1.5;font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap;flex:none;}.ds-item-weight{display:block;margin-top:8px;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;}.ds-menu-row details{margin-top:12px;}.ds-menu-row summary{display:flex;align-items:center;gap:8px;width:fit-content;cursor:pointer;font-size:14px;list-style:none;}.ds-menu-row summary::-webkit-details-marker{display:none;}.ds-menu-row summary:focus-visible{outline:2px solid var(--orange);outline-offset:5px;}.ds-menu-row summary>.ds-icon{width:17px;height:17px;transition:transform .2s;}.ds-menu-row details[open] summary>.ds-icon{transform:rotate(180deg);}.ds-menu-row details>p{font-size:14px;line-height:1.65;max-width:60ch;color:var(--muted);margin:12px 0 0;}.ds-icon{width:24px;height:24px;flex:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}@media(max-width:999px){.ds-item-heading{gap:16px;}.ds-item-heading h3{font-size:20px;}.ds-item-price{font-size:18px;}}@media(max-width:767px){.ds-menu-row{padding:20px 0;gap:16px;}.ds-item-heading{gap:20px;}.ds-item-heading h3{font-size:18px;line-height:1.35;}.ds-item-price{font-size:17px;max-width:45%;white-space:normal;text-align:right;}.ds-item-weight{font-size:12px;margin-top:3px;}.ds-menu-row summary,.ds-menu-row details>p{font-size:13px;}}@media(prefers-reduced-motion:reduce){.ds-menu-row summary>.ds-icon{transition:none;}}"
+    },
+    {
+      "name": "Строка оглавления",
+      "kind": "custom",
+      "refersTo": "menu-index-row",
+      "description": "Название, счётчик и стрелка на оранжевом поле; наведение сохраняет геометрию строки.",
+      "html": "<div class=\"ds-menu-index\"><a class=\"ds-index-row\" href=\"#breakfast\"><span>Завтраки</span><small>9 поз.</small><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></a></div>",
+      "css": ".ds-menu-index{background:var(--orange);color:var(--cream);font:400 16px/1.5 Onest,sans-serif;}.ds-index-row{display:flex;align-items:center;gap:24px;padding:22px 0;border-top:1px solid rgba(255,254,242,.55);border-bottom:1px solid rgba(255,254,242,.55);color:inherit;text-decoration:none;}.ds-index-row>span{font-size:32px;line-height:1.2;font-weight:500;letter-spacing:-.025em;transition:transform .25s var(--ease);}.ds-index-row>small{margin-left:auto;white-space:nowrap;font-size:13px;font-variant-numeric:tabular-nums;}.ds-index-row>.ds-icon{width:28px;height:28px;}.ds-index-row:hover>span{transform:translateX(8px);}.ds-index-row:focus-visible{outline:2px solid var(--cream);outline-offset:5px;}.ds-icon{width:24px;height:24px;flex:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}@media(max-width:999px){.ds-index-row{gap:14px;}.ds-index-row>span{font-size:26px;}}@media(max-width:767px){.ds-index-row{padding:20px 0;gap:18px;}.ds-index-row>small{font-size:12px;}.ds-index-row>.ds-icon{width:22px;height:22px;}}@media(max-width:359px){.ds-index-row{gap:12px;}.ds-index-row>span{font-size:23px;}}@media(prefers-reduced-motion:reduce){.ds-index-row>span{transition:none;}}"
+    },
+    {
+      "name": "Строка адреса",
+      "kind": "custom",
+      "refersTo": "location-row",
+      "description": "Открытая адресная строка на шалфейном поле с отдельной подписью маршрута.",
+      "html": "<div class=\"ds-locations\"><a class=\"ds-location-row\" href=\"#route\"><span class=\"ds-location-address\">Свободы, 183</span><span class=\"ds-route-label\">Маршрут <svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></span></a></div>",
+      "css": ".ds-locations{background:var(--sage);color:var(--ink);font:400 16px/1.5 Onest,sans-serif;}.ds-location-row{padding:28px 0;border-top:1px solid #aebba5;border-bottom:1px solid #aebba5;display:flex;align-items:center;justify-content:space-between;gap:20px;color:inherit;text-decoration:none;}.ds-location-address{font-size:32px;line-height:1.3;font-weight:500;letter-spacing:-.025em;}.ds-route-label{display:flex;gap:12px;align-items:center;font-size:14px;white-space:nowrap;}.ds-route-label .ds-icon{width:22px;height:22px;transition:transform .2s var(--ease);}.ds-location-row:hover .ds-route-label .ds-icon{transform:translate(3px,-3px);}.ds-location-row:hover .ds-location-address{text-decoration:underline;text-decoration-thickness:1px;}.ds-location-row:focus-visible{outline:2px solid var(--orange);outline-offset:5px;}.ds-icon{width:24px;height:24px;flex:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}@media(max-width:1279px){.ds-location-address{font-size:27px;}}@media(max-width:999px){.ds-location-address{font-size:32px;}}@media(max-width:767px){.ds-location-row{padding:24px 0;gap:12px;}.ds-location-address{font-size:24px;}.ds-route-label{font-size:12px;gap:8px;}.ds-route-label .ds-icon{width:19px;height:19px;}}@media(max-width:359px){.ds-location-address{font-size:22px;}}@media(prefers-reduced-motion:reduce){.ds-route-label .ds-icon{transition:none;}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Редакционный кулинарный журнал",
+    "overview": "Тёплая редакционная подача строится вокруг настоящей еды, собственного знака и выразительного масштаба текста. Фотографии остаются главным материалом; типографика и большие цветовые поля связывают их в узнаваемую среду.\n\nПлотность меняется вместе с задачей: истории получают широкие фотографии и свободное пространство, меню — открытые строки, видимые цены и короткие подписи. Оригинальная спираль и фирменное начертание логотипа сохраняются отдельными SVG-активами. Это фактическая система самостоятельного кандидата `koritsa_studio/`; система исходного сайта описана в документации родительского проекта.",
+    "keyCharacteristics": [
+      "Настоящая фотография еды широким полотном.",
+      "Кремовая основа, оливковые тексты, оранжевые действия и поля.",
+      "Один локальный шрифт Onest и оригинальное начертание логотипа.",
+      "Открытые строки с тонкими разделителями.",
+      "Обычная прокрутка и адаптация фотографий к ширине экрана."
+    ],
+    "rules": [
+      {
+        "name": "The Real Food Rule",
+        "body": "Фотографический материал должен происходить из подтверждённой съёмки «Корицы»; фирменный знак и логотип остаются оригинальными.",
+        "section": "colors"
+      },
+      {
+        "name": "The Type Scale Rule",
+        "body": "Различайте заголовки, текст и подписи масштабом и наблюдаемыми весами; цены, вес и счётчики используйте с табличными цифрами.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Ground Rule",
+        "body": "Используйте цветовые поля и открытые разделители для структуры; тонкая дополнительная линия обозначает фокус поиска.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Open Row Rule",
+        "body": "Меню, оглавление и адреса сохраняют открытые строки; содержание и разделители образуют структуру.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "**Do** сохраняйте настоящий фотографический материал и оригинальные SVG-знак и логотип.",
+      "**Do** выравнивайте открытые строки и фотографии по общему контейнеру и фактическому адаптивному полю.",
+      "**Do** используйте табличные цифры для цен, веса и счётчиков.",
+      "**Do** сохраняйте видимый фокус, активную категорию и читаемый статус результатов.",
+      "**Do** возвращайте фотографии историй в обычный поток на компактных экранах и учитывайте уменьшение движения."
+    ],
+    "donts": [
+      "**Don't** заменяйте реальные блюда или отсутствующие фотографии заведений вымышленной визуализацией.",
+      "**Don't** превращайте открытые строки в декоративные карточки с тенями.",
+      "**Don't** подменяйте фирменное начертание логотипа набранным текстом или придуманной спиралью.",
+      "**Don't** перехватывайте прокрутку для смены фотографий.",
+      "**Don't** маскируйте горизонтальное переполнение страницы; прокрутка категорий принадлежит самой полосе."
+    ]
+  }
+}

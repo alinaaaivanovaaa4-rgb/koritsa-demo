@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "moments": [
+    {
+      "id": "breakfast", "label": "Начать с завтрака", "hint": "Сырники, каша или целая тарелка.", "category": "breakfast",
+      "question": "Какой завтрак хочется?", "resultLabel": "На завтрак", "image": "breakfast-scene",
+      "featured": ["turkish-breakfast", "cherry-syrniki", "salmon-draniki", "english-breakfast"],
+      "directions": [
+        {"id": "savory", "label": "Несладкий", "hint": "Яйца, сыр, лепёшка или рыба."},
+        {"id": "sweet", "label": "Сладкий", "hint": "Сырники или каша с фруктами."},
+        {"id": "seafood", "label": "С сёмгой", "hint": "Блинчики или драники."}
+      ],
+      "flavours": [
+        {"id": "cheese", "label": "Яйца и сыр", "hint": "Сулугуни, копчёный сыр или сырные шарики."},
+        {"id": "fruit", "label": "Фрукты и ягоды", "hint": "Вишня, клубника или банан."},
+        {"id": "crispy", "label": "Румяная корочка", "hint": "Сырники или картофельные драники."},
+        {"id": "creamy", "label": "Крем и мягкие соусы", "hint": "Йогурт, сметана или сливочный крем."}
+      ]
+    },
+    {
+      "id": "meal", "label": "Поесть основательно", "hint": "Горячее: паста, курица или рыба.", "category": "hot",
+      "question": "Что хочется в главной роли?", "resultLabel": "На обед или ужин", "image": "orzo-catalog",
+      "featured": ["chicken-fettuccine", "shrimp-orzo", "almond-salmon", "chicken-sweet-potato"],
+      "directions": [
+        {"id": "chicken", "label": "Курица", "hint": "С пастой, рисом, картофелем или бататом."},
+        {"id": "seafood", "label": "Рыба и морепродукты", "hint": "Сёмга, орзо или спагетти с морепродуктами."}
+      ],
+      "flavours": [
+        {"id": "creamy", "label": "Сливочное", "hint": "Мягкий соус, грибы или песто."},
+        {"id": "tomato", "label": "Томатное", "hint": "Томатный соус и морепродукты."},
+        {"id": "expressive", "label": "Карри или терияки", "hint": "Выразительный соус к курице."}
+      ]
+    },
+    {
+      "id": "fresh", "label": "Что-нибудь свежее", "hint": "Салат с овощами, курицей или креветками.", "category": "salads",
+      "question": "Что добавить к зелени?", "resultLabel": "Если хочется салат", "image": "shrimp-catalog",
+      "featured": ["shrimp-avocado", "greek-salad", "chicken-nut-salad", "crispy-eggplant"],
+      "directions": [
+        {"id": "vegetables", "label": "Овощи и сыр", "hint": "Греческий, зелёный или с баклажанами."},
+        {"id": "chicken", "label": "Курица", "hint": "Цезарь, страчателла или ореховый соус."},
+        {"id": "seafood", "label": "Креветки", "hint": "С авокадо или в цезаре."}
+      ],
+      "flavours": [
+        {"id": "fresh", "label": "Овощи и зелень", "hint": "Свежие овощи и микс салатов."},
+        {"id": "creamy", "label": "Сыр и мягкий вкус", "hint": "Страчателла или сырные шарики."},
+        {"id": "fruit", "label": "Фрукты в салате", "hint": "Манго или сезонные фрукты."}
+      ]
+    },
+    {
+      "id": "soup", "label": "Согреться супом", "hint": "Куриный, чечевичный или Том Ям.", "category": "soups",
+      "question": "Какой суп звучит вкуснее?", "resultLabel": "Для тёплой паузы", "image": "lentil-catalog",
+      "featured": ["lentil-soup", "chicken-soup", "tom-yam"],
+      "directions": [
+        {"id": "chicken", "label": "Куриный бульон", "hint": "Лапша, курица и перепелиные яйца."},
+        {"id": "lentils", "label": "Чечевичный", "hint": "Красная чечевица и тыквенные семена."},
+        {"id": "seafood", "label": "С морепродуктами", "hint": "Том Ям с кокосовым молоком и лаймом."}
+      ],
+      "flavours": [
+        {"id": "broth", "label": "Знакомый бульон", "hint": "Курица, лапша и укроп."},
+        {"id": "lentils", "label": "Чечевица", "hint": "Красная чечевица и семена."},
+        {"id": "coconut", "label": "Кокос и лайм", "hint": "Морепродукты и кокосовое молоко."}
+      ]
+    },
+    {
+      "id": "sweet", "label": "Побыть со сладким", "hint": "Вафля, блинчики или чизкейк.", "category": "desserts",
+      "question": "К чему тянет больше?", "resultLabel": "Для сладкой паузы", "image": "syrniki-detail",
+      "featured": ["dubai-cheesecake", "chocolate-waffle", "pancake-burrata", "cherry-waffle", "sweet-pancakes"],
+      "directions": [
+        {"id": "berries", "label": "К фруктам и ягодам", "hint": "Блинчики или вафля с ягодами."},
+        {"id": "chocolate", "label": "К шоколаду", "hint": "Бельгийский шоколад или шоколадные блинчики."}
+      ],
+      "flavours": [
+        {"id": "creamy", "label": "Творог и йогурт", "hint": "Йогуртовый крем или творожная масса."},
+        {"id": "icecream", "label": "С мороженым", "hint": "Вафля, шоколад и ягоды."},
+        {"id": "nuts", "label": "С фисташковой пастой", "hint": "Дубайский чизкейк с тестом катаифи."},
+        {"id": "fruit", "label": "С бананом и ягодами", "hint": "Блинчики с добавлением шоколада."}
+      ]
+    },
+    {
+      "id": "drink", "label": "Только напиток", "hint": "Кофе, чай или что-нибудь холодное.", "category": "drinks",
+      "question": "Что нальём?", "resultLabel": "К вашей паузе", "image": "shared-table",
+      "featured": ["cappuccino", "sencha", "iced-latte", "raf-urbech", "sea-buckthorn", "mojito"],
+      "directions": [
+        {"id": "coffee", "label": "Горячий кофе", "hint": "От эспрессо до авторского рафа."},
+        {"id": "tea", "label": "Чай", "hint": "Классический или фруктовый."},
+        {"id": "warm", "label": "Какао или шоколад", "hint": "Горячие шоколадные напитки."},
+        {"id": "cold", "label": "Что-нибудь холодное", "hint": "Айс-кофе, лимонады, смузи и другие напитки."}
+      ],
+      "flavours": [
+        {"id": "black", "label": "Чёрный кофе", "hint": "Эспрессо или американо.", "when": ["coffee"]},
+        {"id": "milk", "label": "С молоком", "hint": "Флэт, капучино или латте.", "when": ["coffee"]},
+        {"id": "author", "label": "Авторский раф", "hint": "С урбечом, халвой или арахисовый.", "when": ["coffee"]},
+        {"id": "classic-tea", "label": "Классический чай", "hint": "Ассам, сенча, Эрл Грей или Дахунпай.", "when": ["tea"]},
+        {"id": "fruit-tea", "label": "Фруктовый чай", "hint": "Облепиха, гранат-малина или алоэ-киви.", "when": ["tea"]},
+        {"id": "cold-coffee", "label": "Холодный кофе", "hint": "Айс-латте, бамбл или эспрессо-тоник.", "when": ["cold"]},
+        {"id": "lemonade", "label": "Лимонад", "hint": "Бразильский, мохито или киви-яблоко.", "when": ["cold"]},
+        {"id": "smoothie", "label": "Смузи", "hint": "Финиковый или вишнёвый лайм.", "when": ["cold"]},
+        {"id": "matcha", "label": "Матча", "hint": "Айс-матча.", "when": ["cold"]},
+        {"id": "milkshake", "label": "Молочный коктейль", "hint": "Молочный коктейль из меню.", "when": ["cold"]},
+        {"id": "coffee", "label": "Кофе", "hint": "Горячий или холодный.", "when": ["any"]},
+        {"id": "tea", "label": "Чай", "hint": "Классический или фруктовый.", "when": ["any"]},
+        {"id": "cold", "label": "Холодный напиток", "hint": "Лимонады, смузи и айс-напитки.", "when": ["any"]},
+        {"id": "chocolate", "label": "Шоколадный вкус", "hint": "Какао, горячий шоколад или мокачино.", "when": ["coffee", "warm", "any"]}
+      ]
+    }
+  ],
+  "profiles": {
+    "cherry-syrniki": {"directions": ["sweet"], "flavours": ["fruit", "crispy", "creamy"], "summary": "Сырники, греческий йогурт и вишнёвое конфи."},
+    "rice-porridge": {"directions": ["sweet"], "flavours": ["fruit"], "summary": "Рисовая каша с клубникой, бананом и кокосовым молоком."},
+    "oat-porridge": {"directions": ["sweet"], "flavours": ["fruit"], "summary": "Овсяная каша с клубникой, бананом и кокосовым молоком."},
+    "salmon-pancakes": {"directions": ["savory", "seafood"], "flavours": ["creamy"], "summary": "Слабосолёная сёмга и сливочно-творожный крем в блинчиках."},
+    "salmon-draniki": {"directions": ["savory", "seafood"], "flavours": ["crispy", "creamy"], "summary": "Картофельные драники с сёмгой, сметаной с хреном и яйцом пашот."},
+    "shakshuka": {"directions": ["savory"], "flavours": ["creamy"], "summary": "Яйца пашот, йогурт, кинза и турецкая лепёшка."},
+    "turkish-breakfast": {"directions": ["savory"], "flavours": ["cheese"], "summary": "Сулугуни, яйца, хумус, свежие овощи и турецкая лепёшка."},
+    "mountain-breakfast": {"directions": ["savory"], "flavours": ["cheese", "creamy"], "summary": "Яйца всмятку, сливочно-манный соус, копчёный сыр и лепёшка."},
+    "english-breakfast": {"directions": ["savory"], "flavours": ["cheese"], "summary": "Глазунья, чесночные колбаски, сырные шарики и фасоль."},
+    "shrimp-caesar": {"directions": ["seafood"], "flavours": ["fresh"], "summary": "Креветки, айсберг, пекинская капуста и черри."},
+    "chicken-caesar": {"directions": ["chicken"], "flavours": ["fresh"], "summary": "Курица, зелень, черри, перепелиные яйца и пармезан."},
+    "chicken-stracciatella": {"directions": ["chicken"], "flavours": ["fresh", "creamy"], "summary": "Куриное филе, розовые помидоры, опята и страчателла."},
+    "chicken-nut-salad": {"directions": ["chicken"], "flavours": ["fresh", "fruit"], "summary": "Куриное филе, сезонные фрукты, киноа и соус на основе кешью."},
+    "shrimp-avocado": {"directions": ["seafood"], "flavours": ["fresh", "fruit"], "summary": "Креветки, авокадо, манго, киноа и зелень."},
+    "green-salad": {"directions": ["vegetables"], "flavours": ["fresh", "creamy"], "summary": "Эдамаме, брокколи, авокадо, киноа и творожные шарики."},
+    "greek-salad": {"directions": ["vegetables"], "flavours": ["fresh"], "summary": "Огурцы, розовые помидоры, перец, оливки гриль и зелень."},
+    "crispy-eggplant": {"directions": ["vegetables"], "flavours": ["fresh", "creamy"], "summary": "Хрустящие баклажаны, розовые помидоры и сырные шарики."},
+    "chicken-fettuccine": {"directions": ["chicken"], "flavours": ["creamy"], "summary": "Паста с курицей, шампиньонами, песто и сливочным соусом."},
+    "shrimp-orzo": {"directions": ["seafood"], "flavours": ["creamy", "tomato"], "summary": "Орзо с морепродуктами, томатным соусом и сливочным песто."},
+    "chicken-curry": {"directions": ["chicken"], "flavours": ["creamy", "expressive"], "summary": "Куриное филе с рисом, кокосовым молоком и соусом карри."},
+    "chicken-sweet-potato": {"directions": ["chicken"], "flavours": ["creamy", "expressive"], "summary": "Куриное филе в терияки, шампиньоны и пюре из батата."},
+    "almond-salmon": {"directions": ["seafood"], "flavours": ["creamy"], "summary": "Сёмга в миндальной корочке, кускус и сливочно-устричный соус."},
+    "seafood-spaghetti": {"directions": ["seafood"], "flavours": ["tomato"], "summary": "Спагетти с морепродуктами, томатным соусом и шпинатом."},
+    "chicken-roast": {"directions": ["chicken"], "flavours": ["creamy"], "summary": "Курица, картофель, грибы и болгарский перец в сливочном соусе."},
+    "tom-yam": {"directions": ["seafood"], "flavours": ["coconut"], "summary": "Морепродукты, кокосовое молоко, рис и лайм."},
+    "chicken-soup": {"directions": ["chicken"], "flavours": ["broth"], "summary": "Куриный бульон, лапша, курица, перепелиные яйца и чиабатта."},
+    "lentil-soup": {"directions": ["lentils"], "flavours": ["lentils"], "summary": "Красная чечевица с тыквенными семенами и красным маслом."},
+    "sweet-pancakes": {"directions": ["berries", "chocolate"], "flavours": ["fruit"], "summary": "Блинчики с бананом, ягодами и шоколадом."},
+    "chocolate-waffle": {"directions": ["berries", "chocolate"], "flavours": ["icecream"], "summary": "Вафля с бельгийским шоколадом, ягодами и мороженым."},
+    "dubai-cheesecake": {"directions": ["chocolate"], "flavours": ["nuts"], "summary": "Чизкейк с катаифи, бельгийским шоколадом и фисташковой пастой."},
+    "pancake-burrata": {"directions": ["berries"], "flavours": ["creamy"], "summary": "Блинный мешочек с йогуртовым кремом и ягодами."},
+    "cherry-waffle": {"directions": ["berries"], "flavours": ["creamy"], "summary": "Вафля с творожной массой и вишнёвым вареньем."},
+    "espresso": {"directions": ["coffee"], "flavours": ["black", "coffee"], "summary": "Эспрессо из раздела горячего кофе."},
+    "americano": {"directions": ["coffee"], "flavours": ["black", "coffee"], "summary": "Американо из раздела горячего кофе."},
+    "flat": {"directions": ["coffee"], "flavours": ["milk", "coffee"], "summary": "Флэт из раздела горячего кофе."},
+    "cappuccino": {"directions": ["coffee"], "flavours": ["milk", "coffee"], "summary": "Капучино. Вариант напитка уточняйте у бариста."},
+    "latte": {"directions": ["coffee"], "flavours": ["milk", "coffee"], "summary": "Латте. Вариант напитка уточняйте у бариста."},
+    "raf": {"directions": ["coffee"], "flavours": ["coffee"], "summary": "Раф. Вариант напитка уточняйте у бариста."},
+    "cocoa": {"directions": ["warm"], "flavours": ["chocolate"], "summary": "Какао. Вариант напитка уточняйте у бариста."},
+    "hot-chocolate": {"directions": ["warm"], "flavours": ["chocolate"], "summary": "Горячий шоколад. Вариант уточняйте у бариста."},
+    "mochaccino": {"directions": ["coffee"], "flavours": ["chocolate", "coffee"], "summary": "Мокачино. Вариант напитка уточняйте у бариста."},
+    "raf-urbech": {"directions": ["coffee"], "flavours": ["author", "coffee"], "summary": "Раф с урбечом из авторских напитков."},
+    "raf-halva": {"directions": ["coffee"], "flavours": ["author", "coffee"], "summary": "Раф с халвой из авторских напитков."},
+    "raf-peanut": {"directions": ["coffee"], "flavours": ["author", "coffee"], "summary": "Арахисовый раф из авторских напитков."},
+    "frappuccino": {"directions": ["cold"], "flavours": ["cold-coffee", "coffee", "cold"], "summary": "Фраппучино из раздела холодных напитков."},
+    "snow-leopard": {"directions": ["cold"], "flavours": ["cold"], "summary": "Снежный барс из раздела холодных напитков. Состав уточняйте у бариста."},
+    "iced-latte": {"directions": ["cold"], "flavours": ["cold-coffee", "coffee", "cold"], "summary": "Айс-латте из раздела холодных напитков."},
+    "iced-matcha": {"directions": ["cold"], "flavours": ["matcha", "cold"], "summary": "Айс-матча из раздела холодных напитков."},
+    "bumble": {"directions": ["cold"], "flavours": ["cold-coffee", "coffee", "cold"], "summary": "Бамбл из раздела холодных напитков."},
+    "bumble-fresh": {"directions": ["cold"], "flavours": ["cold-coffee", "coffee", "cold"], "summary": "Бамбл на фреше из раздела холодных напитков."},
+    "milkshake": {"directions": ["cold"], "flavours": ["milkshake", "cold"], "summary": "Молочный коктейль из раздела холодных напитков."},
+    "espresso-tonic": {"directions": ["cold"], "flavours": ["cold-coffee", "coffee", "cold"], "summary": "Эспрессо-тоник из раздела холодных напитков."},
+    "assam": {"directions": ["tea"], "flavours": ["classic-tea", "tea"], "summary": "Ассам — чёрный чай. Вариант уточняйте у бариста."},
+    "sencha": {"directions": ["tea"], "flavours": ["classic-tea", "tea"], "summary": "Сенча — зелёный чай. Вариант уточняйте у бариста."},
+    "earl-grey": {"directions": ["tea"], "flavours": ["classic-tea", "tea"], "summary": "Эрл Грей из раздела чая. Вариант уточняйте у бариста."},
+    "da-hong-pao": {"directions": ["tea"], "flavours": ["classic-tea", "tea"], "summary": "Дахунпай из раздела чая. Вариант уточняйте у бариста."},
+    "sea-buckthorn": {"directions": ["tea"], "flavours": ["fruit-tea", "tea"], "summary": "Облепиховый чай. Вариант уточняйте у бариста."},
+    "pomegranate-raspberry": {"directions": ["tea"], "flavours": ["fruit-tea", "tea"], "summary": "Чай «Гранат-малина». Вариант уточняйте у бариста."},
+    "aloe-kiwi": {"directions": ["tea"], "flavours": ["fruit-tea", "tea"], "summary": "Чай «Алоэ-киви». Вариант уточняйте у бариста."},
+    "brazilian": {"directions": ["cold"], "flavours": ["lemonade", "cold"], "summary": "Бразильский лимонад из меню."},
+    "mojito": {"directions": ["cold"], "flavours": ["lemonade", "cold"], "summary": "Лимонад «Мохито» из меню."},
+    "kiwi-apple": {"directions": ["cold"], "flavours": ["lemonade", "cold"], "summary": "Лимонад «Киви-яблоко» из меню."},
+    "dates": {"directions": ["cold"], "flavours": ["smoothie", "cold"], "summary": "Финиковый смузи из меню."},
+    "cherry-lime": {"directions": ["cold"], "flavours": ["smoothie", "cold"], "summary": "Смузи «Вишнёвый лайм» из меню."}
+  }
+}
