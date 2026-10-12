@@ -1,8 +1,7 @@
 (() => {
   'use strict';
   const $ = selector => document.querySelector(selector);
-  const tg = window.Telegram?.WebApp;
-  const inTelegram = !!tg && tg.platform !== 'unknown';
+  let tg, inTelegram = false, bridgeConnected = false;
   const root = document.documentElement;
   const views = ['menu', 'choose', 'favorites', 'cafes'];
   const heart = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 4.8a5.4 5.4 0 0 0-7.6 0L12 5.7l-.9-.9a5.4 5.4 0 0 0-7.6 7.6L12 21l8.5-8.6a5.4 5.4 0 0 0 0-7.6Z"/></svg>';
@@ -19,7 +18,7 @@
   const saved = storage.get('koritsa-miniapp-favorites-v1', []);
   const favorites = new Set(Array.isArray(saved) ? saved.filter(id => typeof id === 'string') : []);
   let catalog, byId, toastTimer, activeView = 'menu', category = 'breakfast', query = '';
-  let dish, photoIndex = 0, pickerMoment, pickerDirection = 'any', pickerFlavour = 'any', pickerResults = false;
+  let dish, photoIndex = 0, pickerMoment, pickerDirection = 'any', pickerFlavour = 'any', pickerStep = 'moment', pickerExtra = '';
   let selectedCafe = storage.get('koritsa-miniapp-cafe-v1', '');
   const start = new URLSearchParams(location.search);
   const dialog = $('#dish-dialog');
@@ -36,16 +35,25 @@
       root.style.setProperty('--safe-' + side, inset + 'px');
     }
   }
-  theme(); safeArea();
-  if (inTelegram) {
+  function connectTelegram() {
+    tg = window.Telegram?.WebApp;
+    inTelegram = !!tg && tg.platform !== 'unknown';
+    theme(); safeArea();
+    if (!inTelegram || bridgeConnected) return;
+    bridgeConnected = true;
     try {
       tg.ready(); tg.expand();
       tg.onEvent('themeChanged', theme);
       tg.onEvent('safeAreaChanged', safeArea);
       tg.onEvent('contentSafeAreaChanged', safeArea);
-      tg.BackButton?.onClick(() => { if (dialog.open) closeDetail(); else go('menu'); });
+      tg.BackButton?.onClick(() => { if (dialog.open) closeDetail(); else if (activeView === 'choose' && pickerStep !== 'moment') pickerBack(); else go('menu'); });
+      const launch = tg.initDataUnsafe?.start_param;
+      if (catalog && !location.hash && !start.get('view') && views.includes(launch)) go(launch);
+      if (catalog) syncRoute();
     } catch { /* Public catalog remains usable without the bridge. */ }
   }
+  connectTelegram();
+  $('#telegram-sdk')?.addEventListener('load', connectTelegram, {once:true});
 
   function notify(message) {
     clearTimeout(toastTimer);
@@ -189,37 +197,50 @@
   $('#dish-favorite').addEventListener('click', () => { if (dish) toggleFavorite(dish.id); });
   $('#dish-cafes').addEventListener('click', () => go('cafes'));
 
-  function choices(values, selected, kind) {
-    return [{id:'any',label:'Любой вариант'}, ...values].map(value =>
-      `<button class="choice-chip" data-${kind}="${escape(value.id)}" aria-pressed="${selected === value.id}">${escape(value.label)}</button>`).join('');
+  function pickerOptions(values, kind) {
+    return values.map(value => `<button class="picker-option" data-${kind}="${escape(value.id)}"><span><strong>${escape(value.label)}</strong><small>${escape(value.hint)}</small></span><span class="option-count">${value.items.length} ${plural(value.items.length,['вариант','варианта','вариантов'])} ${arrow}</span></button>`).join('');
+  }
+  function pickerBack() {
+    pickerExtra = '';
+    if (pickerStep === 'results') pickerStep = 'flavour';
+    else if (pickerStep === 'flavour') pickerStep = 'direction';
+    else { pickerStep = 'moment'; pickerMoment = null; }
+    renderPicker(); focusPicker();
+  }
+  function focusPicker() {
+    $('#picker h2')?.focus({preventScroll:true});
+    $('#choose-title').scrollIntoView({block:'start',behavior:'auto'});
   }
   function renderPicker() {
     const container = $('#picker');
-    const focused = document.activeElement;
-    const focusKind = focused?.dataset?.direction ? 'direction' : focused?.dataset?.flavour ? 'flavour' : '';
-    const focusValue = focusKind ? focused.dataset[focusKind] : '';
-    if (!pickerMoment) {
-      container.innerHTML = '<h2>Какую паузу устроим?</h2><div class="picker-moments">' + catalog.moments.map(moment =>
+    if (!pickerMoment || pickerStep === 'moment') {
+      container.innerHTML = '<h2 tabindex="-1">Какую паузу устроим?</h2><p class="picker-progress">Вопрос 1 из 3 · выберите повод</p><div class="picker-moments">' + catalog.moments.map(moment =>
         `<button class="moment-button" data-moment="${escape(moment.id)}"><strong>${escape(moment.label)}</strong><span>${escape(moment.hint)}</span>${arrow}</button>`).join('') + '</div>';
       return;
     }
-    const flavours = pickerMoment.flavours.filter(flavour => !flavour.when || flavour.when.includes(pickerDirection));
-    container.innerHTML = `<button class="text-button" data-picker-reset>← Другой повод</button><h2 class="picker-title" tabindex="-1">${escape(pickerMoment.question)}</h2><div class="picker-chips">${choices(pickerMoment.directions, pickerDirection, 'direction')}</div><h3 class="picker-title">Какой вкус ближе?</h3><div class="picker-chips">${choices(flavours, pickerFlavour, 'flavour')}</div><button class="primary-button" data-picker-results>Показать варианты ${arrow}</button><div id="picker-results" class="picker-results"></div>`;
-    if (focusKind) container.querySelector(`[data-${focusKind}="${focusValue}"]`)?.focus({preventScroll:true});
-    else if (focused?.dataset?.moment) container.querySelector('.picker-title')?.focus({preventScroll:true});
-    if (!pickerResults) return;
-    const items = catalog.items.filter(item => item.category === pickerMoment.category &&
-      (pickerDirection === 'any' || item.profile.directions.includes(pickerDirection)) &&
-      (pickerFlavour === 'any' || item.profile.flavours.includes(pickerFlavour)));
-    const featured = pickerMoment.featured;
-    items.sort((a, b) => {
-      const rank = item => featured.includes(item.id) ? featured.indexOf(item.id) : 999;
-      return rank(a) - rank(b);
-    });
-    $('#picker-results').innerHTML = `<div class="picker-result-heading"><h2 tabindex="-1">${escape(pickerMoment.resultLabel)}</h2><span>${items.length} ${plural(items.length, ['вариант','варианта','вариантов'])}</span></div>` +
-      (items.length ? '<div class="menu-grid" id="picker-cards"></div><p class="allergy-note">Подбор учитывает вкус, но не исключает аллергены. При аллергии уточните полный состав у сотрудника кофейни.</p>' : '<p>Такого сочетания пока нет. Выберите другой вкус или «Любой вариант».</p>') +
-      `<button class="text-button" data-picker-category="${escape(pickerMoment.category)}">Вся категория ${arrow}</button>`;
-    if (items.length) renderCards($('#picker-cards'), items);
+    const node = catalog.pickerTree[pickerMoment.id];
+    const direction = node.directions.find(value => value.id === pickerDirection) || node.directions[0];
+    const flavour = direction.flavours.find(value => value.id === pickerFlavour) || direction.flavours[0];
+    const back = '<button class="text-button" data-picker-back>← Назад</button>';
+    if (pickerStep === 'direction') {
+      container.innerHTML = `${back}<h2 class="picker-title" tabindex="-1">${escape(pickerMoment.question)}</h2><p class="picker-progress">Вопрос 2 из 3 · ${escape(pickerMoment.label)}</p><div class="picker-options">${pickerOptions(node.directions,'direction')}</div>`;
+      return;
+    }
+    if (pickerStep === 'flavour') {
+      container.innerHTML = `${back}<h2 class="picker-title" tabindex="-1">Какой вкус ближе?</h2><p class="picker-progress">Вопрос 3 из 3 · ${escape(direction.label)}</p><p class="picker-explanation">Здесь только вкусы, подходящие к вашему выбору.</p><div class="picker-options">${pickerOptions(direction.flavours,'flavour')}</div>`;
+      return;
+    }
+    const items = flavour.items.map(id => byId.get(id)).filter(Boolean);
+    const summary = [pickerMoment.label, direction.id !== 'any' ? direction.label : '', flavour.id !== 'any' ? flavour.label : ''].filter(Boolean).join(' · ');
+    const extraButtons = [pickerMoment.category !== 'desserts' ? '<button class="choice-chip" data-picker-extra="sweet">Добавить сладкое</button>' : '', pickerMoment.category !== 'drinks' ? '<button class="choice-chip" data-picker-extra="drink">Добавить напиток</button>' : ''].join('');
+    container.innerHTML = `${back}<div class="picker-result-heading"><h2 tabindex="-1">${escape(pickerMoment.resultLabel)}</h2><span>${items.length} ${plural(items.length,['вариант','варианта','вариантов'])}</span></div><p class="picker-summary">${escape(summary)}</p><div class="menu-grid" id="picker-cards"></div><p class="allergy-note">Подбор учитывает вкус, но не исключает аллергены. При аллергии уточните полный состав у сотрудника кофейни.</p>${extraButtons ? `<h3 class="picker-title">Дополнить вашу паузу?</h3><div class="picker-chips">${extraButtons}</div>` : ''}<div id="picker-extras"></div><div class="picker-actions"><button class="text-button" data-picker-reset>Начать заново</button><button class="text-button" data-picker-category="${escape(pickerMoment.category)}">Вся категория ${arrow}</button></div>`;
+    renderCards($('#picker-cards'), items);
+    if (pickerExtra) {
+      const extraMoment = catalog.moments.find(moment => moment.id === pickerExtra);
+      const extras = catalog.pickerTree[extraMoment.id].directions[0].flavours[0].items.slice(0,3).map(id => byId.get(id));
+      $('#picker-extras').innerHTML = `<h2 tabindex="-1">${pickerExtra === 'sweet' ? 'Сладкое к вашему блюду' : 'Напиток к вашей паузе'}</h2><p class="picker-explanation">Это отдельное дополнение. Основной выбор сохранён.</p><div class="menu-grid" id="extra-cards"></div>`;
+      renderCards($('#extra-cards'), extras);
+    }
   }
   function renderLocations() {
     const focusedCafe = document.activeElement?.dataset?.cafe;
@@ -239,13 +260,14 @@
     if (button?.dataset.photo && dish) { photoIndex = (photoIndex + Number(button.dataset.photo) + dish.photos.length) % dish.photos.length; renderPhoto(); }
     if (button?.dataset.moment) {
       pickerMoment = catalog.moments.find(moment => moment.id === button.dataset.moment);
-      pickerDirection = pickerFlavour = 'any'; pickerResults = false; renderPicker();
+      pickerDirection = pickerFlavour = 'any'; pickerStep = 'direction'; pickerExtra = ''; renderPicker(); focusPicker();
     }
-    if (button?.dataset.direction) { pickerDirection = button.dataset.direction; pickerFlavour = 'any'; pickerResults = false; renderPicker(); }
-    if (button?.dataset.flavour) { pickerFlavour = button.dataset.flavour; pickerResults = false; renderPicker(); }
-    if (button?.hasAttribute('data-picker-reset')) { pickerMoment = null; pickerResults = false; renderPicker(); }
-    if (button?.hasAttribute('data-picker-results')) {
-      pickerResults = true; renderPicker(); $('#picker-results').querySelector('h2')?.focus({preventScroll:true}); $('#picker-results').scrollIntoView({block:'start', behavior:'auto'});
+    if (button?.dataset.direction) { pickerDirection = button.dataset.direction; pickerFlavour = 'any'; pickerStep = 'flavour'; pickerExtra = ''; renderPicker(); focusPicker(); }
+    if (button?.dataset.flavour) { pickerFlavour = button.dataset.flavour; pickerStep = 'results'; pickerExtra = ''; renderPicker(); focusPicker(); }
+    if (button?.hasAttribute('data-picker-back')) pickerBack();
+    if (button?.hasAttribute('data-picker-reset')) { pickerMoment = null; pickerStep = 'moment'; pickerExtra = ''; renderPicker(); focusPicker(); }
+    if (button?.dataset.pickerExtra) {
+      pickerExtra = button.dataset.pickerExtra; renderPicker(); $('#picker-extras h2')?.focus({preventScroll:true}); $('#picker-extras').scrollIntoView({block:'start',behavior:'auto'});
     }
     if (button?.dataset.pickerCategory) { category = button.dataset.pickerCategory; query = ''; $('#search-input').value = ''; go('menu'); }
     if (button?.dataset.cafe) {
@@ -283,7 +305,9 @@
       // Only a navigation hint; identity and privileges never use initDataUnsafe.
       if (!start.get('view') && views.includes(launch)) start.set('view', launch);
       loader.hidden = true; updateFavoriteButtons(); syncRoute();
+      window.__koritsaMiniArrival?.ready();
     } catch {
+      window.__koritsaMiniArrival?.error();
       loader.innerHTML = '<p>Меню не загрузилось</p><span>Проверьте соединение и попробуйте ещё раз.</span><button class="primary-button" id="retry-load">Попробовать снова</button>';
       $('#retry-load').addEventListener('click', load, {once:true});
     } finally {

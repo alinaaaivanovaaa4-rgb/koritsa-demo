@@ -7,12 +7,19 @@
   <meta name="description" content="Меню Корицы в Telegram: блюда, напитки и кофейни в Прохладном.">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://telegram.org; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'">
   <title>Корица — меню</title>
-  <script src="https://telegram.org/js/telegram-web-app.js?64" defer></script>
-  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="arrival.css?v=b27ef2684cef">
+  <script src="arrival.js?v=9cf95f1f3401" defer></script>
+  <script id="telegram-sdk" src="https://telegram.org/js/telegram-web-app.js?64" async></script>
+  <link rel="stylesheet" href="app.css?v=4d1668c394ed">
   <link rel="preload" href="../assets/fonts/onest-variable.woff2" as="font" type="font/woff2" crossorigin>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=a6142c364952" defer></script>
 </head>
 <body>
+  <section class="mini-arrival" id="mini-arrival" role="dialog" aria-modal="true" aria-labelledby="arrival-title">
+    <div class="arrival-top"><img src="../assets/brand/wordmark-olive.svg" width="112" height="32" alt="Корица"><button id="arrival-skip">К меню <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button></div>
+    <div class="arrival-middle"><h2 id="arrival-title">Сейчас будет<br><span>хорошо.</span></h2><p>Кофе, еда и время для себя.</p><div class="arrival-scene" aria-hidden="true"><div class="arrival-beans"></div><img class="arrival-plate arrival-savory" src="../assets/intro/plates/shrimp-orzo-cutout.webp" width="768" height="512" alt="" fetchpriority="low"><img class="arrival-plate arrival-sweet" src="../assets/intro/plates/cherry-syrniki-cutout.webp" width="768" height="512" alt="" fetchpriority="low"><img class="arrival-mark" src="../assets/brand/mark-olive.svg" width="88" height="88" alt=""></div></div>
+    <div class="arrival-bottom"><span>кофе · еда · пауза</span><span id="arrival-status" role="status" aria-atomic="true">Открываем меню</span></div>
+  </section>
   <a class="skip-link" href="#content">Перейти к меню</a>
   <div class="app-shell">
     <header class="app-header">
