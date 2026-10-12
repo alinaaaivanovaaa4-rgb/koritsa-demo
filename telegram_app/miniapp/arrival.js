@@ -21,6 +21,7 @@
     siblings.forEach(el => { el.inert = false; });
     root.classList.remove('arrival-active'); overlay.hidden = true;
     if (hadFocus) document.querySelector('#search-input')?.focus({preventScroll:true});
+    window.dispatchEvent(new Event('koritsa-arrival-closed'));
   }
   function leave(immediate = false) {
     if (released || closing) return;

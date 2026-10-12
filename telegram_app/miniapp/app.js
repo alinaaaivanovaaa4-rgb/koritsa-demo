@@ -81,7 +81,7 @@
     if (activeView === 'choose') renderPicker();
     if (activeView === 'cafes') renderLocations();
     const item = byId.get(params.get('item'));
-    if (item) openDetail(item);
+    if (item && !root.classList.contains('arrival-active')) openDetail(item);
     else if (dialog.open) { dialog.close(); dish = null; }
     if (inTelegram) {
       try { if (item || activeView !== 'menu') tg.BackButton?.show(); else tg.BackButton?.hide(); } catch {}
@@ -89,6 +89,7 @@
     if (viewChanged) window.scrollTo({top:0, behavior:'instant'});
   }
   window.addEventListener('hashchange', syncRoute);
+  window.addEventListener('koritsa-arrival-closed', syncRoute);
 
   function favoriteButton(item) {
     const selected = favorites.has(item.id);
