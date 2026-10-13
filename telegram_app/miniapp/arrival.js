@@ -6,7 +6,9 @@
   const simple = reduced.matches || !!navigator.connection?.saveData;
   const preview = new URLSearchParams(location.search).get('intro') === '1';
   const started = performance.now();
-  const minimum = simple ? 0 : preview ? 3600 : 1200;
+  let seen=false;
+  try { seen=sessionStorage.getItem('koritsa-arrival-seen-v2')==='1'; } catch {}
+  const minimum = simple || (seen && !preview) ? 0 : preview ? 3600 : 900;
   const siblings = [...document.body.children].filter(el => el !== overlay && el.tagName !== 'SCRIPT' && !el.inert);
   const skip = document.querySelector('#arrival-skip');
   let released = false, closing = false, catalogReady = false, delay, exitTimer;
@@ -15,6 +17,7 @@
   siblings.forEach(el => { el.inert = true; });
   function release() {
     if (released) return;
+    try { sessionStorage.setItem('koritsa-arrival-seen-v2','1'); } catch {}
     released = true; clearTimeout(deadline); clearTimeout(delay); clearTimeout(exitTimer);
     const hadFocus = overlay.contains(document.activeElement);
     document.removeEventListener('keydown', keys);
@@ -27,6 +30,7 @@
     if (released || closing) return;
     closing = true;
     if (immediate || simple) release();
+    else if(seen && !preview) release();
     else { overlay.classList.add('arrival-closing'); exitTimer = setTimeout(release, 300); }
   }
   function keys(event) {
