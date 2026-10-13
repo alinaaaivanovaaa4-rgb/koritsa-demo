@@ -1,0 +1,15 @@
+{
+  "prompt": "SOURCE: media/photographer/Корица/01 фото/alimpro-1285.jpg. cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients. Local candidate for shakshuka; kitchen confirmation pending.",
+  "createdAt": "2026-10-13T12:02:17.932113+00:00",
+  "file": "photographer/shakshuka-scene-960.webp",
+  "width": 960,
+  "height": 640,
+  "dish": "shakshuka-scene",
+  "menuItem": "shakshuka",
+  "source": "User-supplied photographer delivery 2026-10-10",
+  "original": "media/photographer/Корица/01 фото/alimpro-1285.jpg",
+  "originalSha256": "fbe78a1a07fc9f7bf1705a456a4ce61abedcf58588594894c2ab00cfc39d2dfd",
+  "processing": "cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients",
+  "reviewStatus": "local candidate; kitchen confirmation pending",
+  "bytes": 91778
+}

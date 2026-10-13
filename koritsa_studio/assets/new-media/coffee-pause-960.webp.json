@@ -1,0 +1,13 @@
+{
+  "prompt": "SOURCE: media/koritsa-2/Корица 2 фото/DSC08871.JPG. cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients.",
+  "file": "new-media/coffee-pause-960.webp",
+  "width": 960,
+  "height": 1442,
+  "dish": "coffee-pause",
+  "menuItem": null,
+  "source": "User-supplied media delivery copied 2026-10-12",
+  "original": "media/koritsa-2/Корица 2 фото/DSC08871.JPG",
+  "originalSha256": "89622bae414fb2ab5a5411002700bd8ffebbdb7e1edc22cc67a2cee30c203a0f",
+  "processing": "cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients",
+  "bytes": 58808
+}

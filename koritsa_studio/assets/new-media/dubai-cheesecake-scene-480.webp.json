@@ -1,0 +1,15 @@
+{
+  "prompt": "SOURCE: media/koritsa-2/Корица 2 фото/IMG_7652.JPG. cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients. Local candidate for dubai-cheesecake; kitchen confirmation pending.",
+  "createdAt": "2026-10-13T12:02:17.932113+00:00",
+  "file": "new-media/dubai-cheesecake-scene-480.webp",
+  "width": 480,
+  "height": 721,
+  "dish": "dubai-cheesecake-scene",
+  "menuItem": "dubai-cheesecake",
+  "source": "User-supplied media delivery copied 2026-10-12",
+  "original": "media/koritsa-2/Корица 2 фото/IMG_7652.JPG",
+  "originalSha256": "18208a9ffc688497390f82d8e19fbd43a75a5ddd63b92f9755796a386d8f99e4",
+  "processing": "cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients",
+  "reviewStatus": "local candidate; kitchen confirmation pending",
+  "bytes": 14700
+}

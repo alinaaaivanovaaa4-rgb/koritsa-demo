@@ -39,6 +39,7 @@ def check_reference(source, url):
 
 def main():
     runpy.run_path(str(ROOT / 'tools/build_studio.py'), run_name='__main__')
+    runpy.run_path(str(ROOT / 'tools/build_miniapp.py'), run_name='__main__')
     if OUTPUT.exists():
         shutil.rmtree(OUTPUT)
     OUTPUT.mkdir()
@@ -47,18 +48,19 @@ def main():
     for pattern in ('*.css', '*.js'):
         for source in SITE.glob(pattern):
             shutil.copy2(source, OUTPUT / source.name)
+    shutil.copytree(SITE / 'miniapp', OUTPUT / 'miniapp')
     shutil.copytree(SITE / 'assets', OUTPUT / 'assets', ignore=shutil.ignore_patterns(
         'provenance.json', 'README.md', 'prompt.txt', '*.prompt.txt', '.DS_Store'))
     (OUTPUT / '.nojekyll').touch()
 
     references = 0
-    for source in OUTPUT.glob('*.html'):
+    for source in OUTPUT.rglob('*.html'):
         parser = References()
         parser.feed(source.read_text())
         for url in parser.urls:
             check_reference(source, url)
             references += 1
-    for source in OUTPUT.glob('*.css'):
+    for source in OUTPUT.rglob('*.css'):
         for url in re.findall(r'url\(\s*[\"\']?([^\"\')]+)[\"\']?\s*\)', source.read_text()):
             check_reference(source, url.strip())
             references += 1

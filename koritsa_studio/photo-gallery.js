@@ -10,6 +10,7 @@
   const galleries = new Set();
   const autoplayDelay = 5000;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const connection = navigator.connection;
   const pauseIcon = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg>';
   const playIcon = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 5 10 7-10 7Z"/></svg>';
   const stopTimer = state => { clearTimeout(state.timer); state.timer = null; };
@@ -48,11 +49,11 @@
   const markup = (id, className = '', sizes = '(max-width: 767px) 90vw, 600px', expanded = false) => {
     const item = dishes[id];
     if (!item) return '';
-    return `<div class="photo-gallery ${escape(className)} ${item.photos.length === 1 ? 'is-single' : ''}" data-photo-gallery="${escape(id)}" data-sizes="${escape(sizes)}" role="region" aria-roledescription="галерея" aria-label="Фотографии: ${escape(item.title)}" tabindex="0"><div class="photo-gallery-track">${item.photos.map((p, i) => `<figure class="photo-gallery-slide" aria-hidden="${i !== 0}"><img ${i === 0 ? `src="${escape(p.src)}" srcset="${escape(p.srcset)}"` : ''} data-photo-index="${i}" sizes="${escape(sizes)}" width="${p.width}" height="${p.height}" alt="${escape(item.title)} — фото ${i + 1} из ${item.photos.length}" decoding="async" ${i === 0 ? 'loading="eager"' : 'loading="lazy"'}></figure>`).join('')}</div>${!expanded ? `<button class="photo-gallery-expand" type="button" data-gallery-open="${escape(id)}" aria-label="Увеличить фотографии: ${escape(item.title)}">${expand}</button>` : ''}${item.photos.length > 1 ? `<div class="photo-gallery-controls"><button type="button" data-gallery-step="-1" aria-label="Предыдущее фото" disabled>${chevron}</button><span class="photo-gallery-counter" role="status" aria-live="polite" aria-atomic="true">1 / ${item.photos.length}</span><button type="button" data-gallery-step="1" aria-label="Следующее фото">${chevron}</button><span class="photo-gallery-line" aria-hidden="true"><span style="width:${100 / item.photos.length}%"></span></span></div>` : ''}</div>`;
+    return `<div class="photo-gallery ${escape(className)} ${item.photos.length === 1 ? 'is-single' : ''}" data-photo-gallery="${escape(id)}" data-sizes="${escape(sizes)}" role="region" aria-roledescription="галерея" aria-label="Фотографии: ${escape(item.title)}" tabindex="0"><div class="photo-gallery-track">${item.photos.map((p, i) => `<figure class="photo-gallery-slide" aria-hidden="${i !== 0}"><img ${i === 0 ? `src="${escape(p.src)}" srcset="${escape(p.srcset)}"` : ''} data-photo-index="${i}" sizes="${escape(sizes)}" width="${p.width}" height="${p.height}" alt="${escape(item.title)} — фото ${i + 1} из ${item.photos.length}" decoding="async" ${i === 0 ? 'loading="eager"' : 'loading="lazy"'}></figure>`).join('')}</div>${!expanded ? `<button class="photo-gallery-expand" type="button" data-gallery-open="${escape(id)}" aria-label="Увеличить фотографии: ${escape(item.title)}">${expand}</button>` : ''}${item.photos.length > 1 ? `<div class="photo-gallery-controls"><button type="button" data-gallery-step="-1" aria-label="Предыдущее фото" disabled>${chevron}</button><span class="photo-gallery-counter" role="status" aria-live="polite" aria-atomic="true">1 / ${item.photos.length}</span><button type="button" data-gallery-step="1" aria-label="Следующее фото">${chevron}</button><span class="photo-gallery-line" aria-hidden="true"><span style="width:${100 / item.photos.length}%"></span></span></div>` : ''}<p class="photo-gallery-message" role="status" aria-live="polite" hidden></p></div>`;
   };
   const hydrate = (gallery, index) => {
     const photos = dishes[gallery.dataset.photoGallery].photos;
-    [index - 1, index, index + 1].forEach(i => {
+    (connection?.saveData ? [index] : [index - 1, index, index + 1]).forEach(i => {
       const img = gallery.querySelector(`[data-photo-index="${i}"]`);
       if (!img || img.hasAttribute('src')) return;
       img.src = photos[i].src;
@@ -68,10 +69,32 @@
     const index = Math.max(0, Math.min(requested, item.photos.length - 1));
     state.index = index;
     const revision = ++state.revision;
+    const message = gallery.querySelector('.photo-gallery-message');
+    if (message) message.hidden = true;
+    if (index === state.displayedIndex) { gallery.removeAttribute('aria-busy'); return; }
+    gallery.setAttribute('aria-busy', 'true');
     hydrate(gallery, index);
     const image = gallery.querySelector(`[data-photo-index="${index}"]`);
-    try { await image.decode(); } catch { /* Keep navigation usable on slow or failed loads. */ }
+    let deadline;
+    try {
+      await Promise.race([image.decode(), new Promise((_, reject) => {
+        deadline = setTimeout(() => reject(new Error('Photo load timed out')), 4000);
+      })]);
+    } catch {
+      if (!gallery.isConnected || revision !== state.revision) return;
+      state.index = state.displayedIndex;
+      gallery.removeAttribute('aria-busy');
+      image.removeAttribute('src');
+      image.removeAttribute('srcset');
+      if (message) {
+        message.textContent = 'Фото не загрузилось. Нажмите стрелку ещё раз — текущий снимок сохранён.';
+        message.hidden = false;
+      }
+      if (automatic) pause(gallery);
+      return;
+    } finally { clearTimeout(deadline); }
     if (!gallery.isConnected || revision !== state.revision) return;
+    gallery.removeAttribute('aria-busy');
     if (automatic && !canPlay(gallery, state)) { state.index = state.displayedIndex; return; }
     const track = gallery.querySelector('.photo-gallery-track');
     const jump = Math.abs(index - state.displayedIndex) > 1;
@@ -90,10 +113,15 @@
     const line = gallery.querySelector('.photo-gallery-line>span');
     if (line) line.style.width = `${(index + 1) / item.photos.length * 100}%`;
   };
+  const endPointer = (gallery, state, pointerId = state.pointer?.id) => {
+    if (!state.pointer || state.pointer.id !== pointerId) return;
+    state.pointer = null;
+    if (gallery.hasPointerCapture(pointerId)) gallery.releasePointerCapture(pointerId);
+  };
   const mount = (root = document) => {
     root.querySelectorAll('[data-photo-gallery]').forEach(gallery => {
       if (states.has(gallery)) return;
-      const state = {index: 0, displayedIndex: 0, revision: 0, pointer: null, timer: null, visible: false, hovered: false, focused: false, paused: reducedMotion.matches || !!gallery.closest('dialog'), direction: 1};
+      const state = {index: 0, displayedIndex: 0, revision: 0, pointer: null, timer: null, visible: false, hovered: false, focused: false, paused: reducedMotion.matches || !!connection?.saveData || !!gallery.closest('dialog'), direction: 1};
       states.set(gallery, state);
       galleries.add(gallery);
       const controls = gallery.querySelector('.photo-gallery-controls');
@@ -123,19 +151,20 @@
         if (next !== null) { event.preventDefault(); show(gallery, next); }
       });
       gallery.addEventListener('pointerdown', event => {
-        if (!event.isPrimary || event.button !== 0 || event.target.closest('button')) return;
+        if (!event.isPrimary || event.button !== 0 || state.pointer || event.target.closest('button')) return;
         pause(gallery);
         state.pointer = {id: event.pointerId, x: event.clientX, y: event.clientY};
         gallery.setPointerCapture(event.pointerId);
       });
       gallery.addEventListener('pointerup', event => {
         const start = state.pointer;
-        state.pointer = null;
         if (!start || start.id !== event.pointerId) return;
+        endPointer(gallery, state, event.pointerId);
         const x = event.clientX - start.x, y = event.clientY - start.y;
         if (Math.abs(x) > 45 && Math.abs(x) > Math.abs(y) * 1.3) show(gallery, state.index + (x < 0 ? 1 : -1));
       });
-      gallery.addEventListener('pointercancel', () => { state.pointer = null; });
+      gallery.addEventListener('pointercancel', event => endPointer(gallery, state, event.pointerId));
+      gallery.addEventListener('lostpointercapture', event => endPointer(gallery, state, event.pointerId));
       gallery.addEventListener('pointerenter', event => { if (event.pointerType !== 'touch') { state.hovered = true; stopTimer(state); } });
       gallery.addEventListener('pointerleave', () => { state.hovered = false; schedule(gallery); });
       gallery.addEventListener('focusin', () => { state.focused = true; stopTimer(state); });
@@ -154,12 +183,22 @@
   }), {threshold: [0, .4]});
   const unmount = root => root.querySelectorAll('[data-photo-gallery]').forEach(gallery => {
     const state = states.get(gallery);
-    if (state) { stopTimer(state); state.revision++; }
+    if (state) { stopTimer(state); endPointer(gallery, state); state.revision++; }
     observer.unobserve(gallery);
     galleries.delete(gallery);
     states.delete(gallery);
   });
   document.addEventListener('visibilitychange', () => galleries.forEach(schedule));
+  window.addEventListener('blur', () => galleries.forEach(gallery => {
+    const state = states.get(gallery);
+    endPointer(gallery, state);
+    state.hovered = false;
+    stopTimer(state);
+  }));
+  window.addEventListener('focus', () => galleries.forEach(schedule));
+  connection?.addEventListener('change', () => {
+    if (connection.saveData) galleries.forEach(pause);
+  });
   reducedMotion.addEventListener('change', () => {
     if (reducedMotion.matches) galleries.forEach(pause);
   });
@@ -176,7 +215,7 @@
     opener = button;
     galleries.forEach(gallery => stopTimer(states.get(gallery)));
     unmount(dialog);
-    dialog.innerHTML = `<div class="photo-gallery-dialog-heading"><h2 id="photo-gallery-title">${escape(item.title)}</h2><button type="button" data-gallery-close aria-label="Закрыть фотографии">×</button></div>${markup(id, 'is-expanded', '(max-width: 767px) 94vw, 960px', true)}`;
+    dialog.innerHTML = `<div class="photo-gallery-dialog-heading"><h2 id="photo-gallery-title">${escape(item.title)}</h2><button type="button" data-gallery-close aria-label="Закрыть фотографии"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></div>${markup(id, 'is-expanded', '(max-width: 767px) 94vw, 960px', true)}`;
     mount(dialog);
     dialog.showModal();
     const parent = button.closest('[data-photo-gallery]');

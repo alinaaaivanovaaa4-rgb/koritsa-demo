@@ -10,6 +10,7 @@
 .photo-gallery-controls svg,.photo-gallery-expand svg{width:22px;height:22px;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .photo-gallery-controls [data-gallery-step="-1"] svg{transform:rotate(180deg)}
 .photo-gallery-counter{min-width:68px;text-align:center;font-size:12px;font-variant-numeric:tabular-nums;letter-spacing:.08em}
+.photo-gallery-message{position:absolute;left:12px;right:12px;bottom:68px;z-index:2;padding:10px 12px;background:var(--cream);color:var(--ink);font-size:14px;line-height:1.5;border-radius:6px}
 .photo-gallery-controls .photo-gallery-autoplay{position:absolute;right:12px;top:4px}
 .photo-gallery-line{position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--line)}
 .photo-gallery-line>span{display:block;height:100%;background:var(--olive);transition:width 440ms cubic-bezier(.22,.61,.36,1)}
@@ -23,7 +24,7 @@
 .photo-gallery-dialog::backdrop{background:#253322c9}
 .photo-gallery-dialog-heading{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:16px}
 .photo-gallery-dialog-heading h2{font-size:26px;line-height:1.2;letter-spacing:-.025em}
-.photo-gallery-dialog-heading>button{flex:none;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:none;font-size:28px;color:var(--ink);cursor:pointer}
+.photo-gallery-dialog-heading>button{display:grid;place-items:center;flex:none;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:none;color:var(--ink);cursor:pointer}
 .photo-gallery.is-expanded{height:min(72svh,760px);border-radius:8px}
 .photo-gallery.is-expanded .photo-gallery-track{bottom:56px}
 .photo-gallery.is-expanded.is-single .photo-gallery-track{bottom:0}

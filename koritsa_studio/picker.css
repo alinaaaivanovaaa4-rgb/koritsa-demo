@@ -9,7 +9,7 @@
 .picker-main{padding-block:32px 64px;max-width:1160px}
 .picker-heading{display:flex;justify-content:space-between;gap:24px;align-items:center;margin-bottom:32px}
 .picker-heading h1{font-size:15px;line-height:1.4;letter-spacing:.01em;font-weight:500}
-.picker-heading h1>span{font-weight:400;color:#d1dac8}
+.picker-heading h1>span{font-weight:400;color:#e0e6d6}
 .picker-full-menu{display:flex;align-items:center;gap:12px;font-size:12px;min-height:40px}
 .picker-full-menu svg{width:17px;height:17px}
 .picker-full-menu:hover{text-decoration:underline}
@@ -20,7 +20,7 @@
 #picker-current-title:focus{outline:none}
 .picker-question-heading p,.picker-results-heading p{font-size:15px;line-height:1.6}
 .picker-progress{flex:none;display:grid;grid-template-columns:auto auto;align-items:center;gap:10px 16px;margin-top:4px}
-.picker-progress-caption{grid-column:1/-1;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#d1dac8}
+.picker-progress-caption{grid-column:1/-1;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#e0e6d6}
 .picker-progress>span:nth-child(2){font-size:30px;line-height:1;font-weight:350;font-variant-numeric:tabular-nums}
 .picker-progress small{font-size:16px}
 .picker-progress-track{display:flex;gap:5px;width:54px}
@@ -107,6 +107,7 @@
 .picker-more svg{width:22px;height:22px}
 .picker-more:hover{background:var(--sage)}
 .picker-availability{font-size:12px;line-height:1.6;margin-top:24px}
+.picker-allergen-note{font-size:13px;font-weight:500;line-height:1.55;max-width:70ch;margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
 .picker-comparison-bar{position:fixed;left:0;right:0;bottom:0;z-index:12;background:var(--cream);color:var(--ink);padding:12px 0 calc(12px + env(safe-area-inset-bottom));box-shadow:0 -8px 30px #25332220}
 .picker-comparison-bar>.wrap{display:flex;gap:28px;align-items:center}
 .picker-comparison-bar p{font-size:14px;font-weight:500}
@@ -160,7 +161,7 @@
  .picker-option-symbol,.picker-option-symbol svg{width:34px;height:34px}
  .picker-option-copy{padding:0;min-height:0;gap:6px}
  .picker-option-label,.is-moments .picker-option-label{font-size:19px;line-height:1.15}
- .picker-option-hint{font-size:11px;line-height:1.5}
+ .picker-option-hint{font-size:14px;line-height:1.5}
  .picker-option-arrow{width:28px;height:28px}
  .picker-option:nth-last-child(-n+2),.picker-options:has(.is-any) .picker-option:nth-last-child(-n+3){border-bottom-color:var(--line)}
  .picker-option:last-child{border-bottom:0}

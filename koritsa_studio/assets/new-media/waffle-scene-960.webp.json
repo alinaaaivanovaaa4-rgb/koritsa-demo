@@ -1,0 +1,13 @@
+{
+  "prompt": "SOURCE: media/koritsa-2/Корица 2 фото/IMG_7650.JPG. cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients.",
+  "file": "new-media/waffle-scene-960.webp",
+  "width": 960,
+  "height": 1442,
+  "dish": "waffle-scene",
+  "menuItem": "chocolate-waffle",
+  "source": "User-supplied media delivery copied 2026-10-12",
+  "original": "media/koritsa-2/Корица 2 фото/IMG_7650.JPG",
+  "originalSha256": "4d773961d1e18b0f293210ff3a7dc194415dcc3077811f36c949b593b2613ec3",
+  "processing": "cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients",
+  "bytes": 60948
+}

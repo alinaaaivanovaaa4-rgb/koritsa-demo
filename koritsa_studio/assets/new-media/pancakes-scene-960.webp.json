@@ -1,0 +1,13 @@
+{
+  "prompt": "SOURCE: media/koritsa-2/Корица 2 фото/IMG_7656.JPG. cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients.",
+  "file": "new-media/pancakes-scene-960.webp",
+  "width": 960,
+  "height": 1442,
+  "dish": "pancakes-scene",
+  "menuItem": null,
+  "source": "User-supplied media delivery copied 2026-10-12",
+  "original": "media/koritsa-2/Корица 2 фото/IMG_7656.JPG",
+  "originalSha256": "1c788e741a5d55e36fe7939d055c3c2de7c48a9aa107f87e197db086280df65c",
+  "processing": "cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients",
+  "bytes": 63320
+}

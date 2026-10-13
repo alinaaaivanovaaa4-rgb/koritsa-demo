@@ -1,0 +1,15 @@
+{
+  "prompt": "SOURCE: media/photographer/Корица/01 фото/alimpro-1276.jpg. cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients. Local candidate for mountain-breakfast; kitchen confirmation pending.",
+  "createdAt": "2026-10-13T12:02:17.932113+00:00",
+  "file": "photographer/mountain-breakfast-detail-480.webp",
+  "width": 480,
+  "height": 720,
+  "dish": "mountain-breakfast-detail",
+  "menuItem": "mountain-breakfast",
+  "source": "User-supplied photographer delivery 2026-10-10",
+  "original": "media/photographer/Корица/01 фото/alimpro-1276.jpg",
+  "originalSha256": "affdb57edd10e9fbcf42515b6ec81e908d98ffc491c3a2a82f163703cefe3e47",
+  "processing": "cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients",
+  "reviewStatus": "local candidate; kitchen confirmation pending",
+  "bytes": 49864
+}

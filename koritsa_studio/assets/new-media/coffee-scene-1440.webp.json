@@ -1,0 +1,13 @@
+{
+  "prompt": "SOURCE: media/koritsa-2/Корица 2 фото/IMG_7388.JPG. cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients.",
+  "file": "new-media/coffee-scene-1440.webp",
+  "width": 1440,
+  "height": 2163,
+  "dish": "coffee-scene",
+  "menuItem": null,
+  "source": "User-supplied media delivery copied 2026-10-12",
+  "original": "media/koritsa-2/Корица 2 фото/IMG_7388.JPG",
+  "originalSha256": "3edb5f57bd57478591911860e834502338e7dff39a9c9bd9fb239a76cae3e88f",
+  "processing": "cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients",
+  "bytes": 31888
+}

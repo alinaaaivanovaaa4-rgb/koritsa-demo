@@ -82,7 +82,8 @@
     return `<div class="picker-results-heading"><div><h2 id="picker-current-title" tabindex="-1">${pool.length === 1 ? 'Кажется, это ваше.' : 'Аппетит подсказал.'}</h2><p>${escape(current.resultLabel)}. ${pool.length > 1 ? 'Вот ваши идеи. Две можно сравнить рядом.' : 'Остаётся посмотреть состав и выбрать.'}</p></div><span class="picker-result-count">${countLabel(pool.length)} по вашим ответам</span></div>${trail()}
       <div class="picker-results ${visible.length === 1 ? 'has-one' : visible.length === 2 ? 'has-two' : ''}">${plated.map(card).join('')}</div>
       <div class="picker-result-footer">${pool.length > 3 ? `<button type="button" class="picker-more" data-action="more">Подать другие идеи ${arrow}</button>` : '<a class="picker-text-button" href="menu.html">Всё меню ' + arrow + '</a>'}<div><button type="button" class="picker-text-button" data-action="back">Изменить ответы</button><button type="button" class="picker-text-button" data-action="restart">Начать заново</button></div></div>
-      <p class="picker-availability">Наличие блюд и варианты напитков уточняйте в кофейне.</p>`;
+      <p class="picker-availability">Наличие блюд и варианты напитков уточняйте в кофейне.</p>
+      <p class="picker-allergen-note">Подбор не учитывает аллергены и индивидуальные ограничения. Перед заказом уточните состав у бариста.</p>`;
   };
 
   const syncComparison = () => {
@@ -109,7 +110,7 @@
   };
 
   const revealResults = () => {
-    if (reducedMotion.matches || !Element.prototype.animate) return;
+    if (reducedMotion.matches || navigator.connection?.saveData || !Element.prototype.animate) return;
     const revision = revealRevision;
     const {pool} = core.results(data, answers, offset);
     const cards = [...stage.querySelectorAll('[data-result-id]')];
@@ -119,13 +120,14 @@
     cards.forEach((card, column) => {
       const item = data.items.find(entry => entry.id === card.dataset.resultId);
       const field = card.querySelector('.picker-result-visual');
+      const frameSizes = `${Math.ceil(field.getBoundingClientRect().width)}px`;
       const slot = document.createElement('div');
       slot.className = 'picker-slot';
       slot.setAttribute('aria-hidden', 'true');
       // The reel decorates the already computed recommendation; it does not alter matching.
       const frames = Array.from({length: 13 + column * 2}, (_, index) => pool[(index + column) % pool.length]);
       frames.push(item);
-      slot.innerHTML = `<div class="picker-slot-track">${frames.map(entry => `<div class="picker-slot-face ${entry.photo ? '' : 'is-type'}">${entry.photo ? `<img src="${escape(entry.photo.src)}" width="${entry.photo.width}" height="${entry.photo.height}" alt="" decoding="async">` : `<span>${escape(entry.title)}</span><img src="assets/brand/mark-cream.svg" width="48" height="48" alt="">`}<span class="picker-slot-caption">${escape(entry.title)}</span></div>`).join('')}</div>`;
+      slot.innerHTML = `<div class="picker-slot-track">${frames.map(entry => `<div class="picker-slot-face ${entry.photo ? '' : 'is-type'}">${entry.photo ? `<img src="${escape(entry.photo.src)}" srcset="${escape(entry.photo.srcset)}" sizes="${frameSizes}" width="${entry.photo.width}" height="${entry.photo.height}" alt="" decoding="async">` : `<span>${escape(entry.title)}</span><img src="assets/brand/mark-cream.svg" width="48" height="48" alt="">`}<span class="picker-slot-caption">${escape(entry.title)}</span></div>`).join('')}</div>`;
       field.append(slot);
       card.classList.add('is-spinning');
       card.inert = true;
@@ -265,6 +267,9 @@
   });
   reducedMotion.addEventListener('change', event => {
     if (event.matches) { cancelReveal(); message.textContent = ''; }
+  });
+  navigator.connection?.addEventListener('change', () => {
+    if (navigator.connection.saveData) { cancelReveal(); message.textContent = ''; }
   });
   window.addEventListener('resize', () => {
     if (stage.hasAttribute('aria-busy')) { cancelReveal(); message.textContent = ''; }

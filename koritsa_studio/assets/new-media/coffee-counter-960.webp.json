@@ -1,0 +1,13 @@
+{
+  "prompt": "SOURCE: media/koritsa-2/Корица 2 фото/IMG_8030.JPG. cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients.",
+  "file": "new-media/coffee-counter-960.webp",
+  "width": 960,
+  "height": 1442,
+  "dish": "coffee-counter",
+  "menuItem": null,
+  "source": "User-supplied media delivery copied 2026-10-12",
+  "original": "media/koritsa-2/Корица 2 фото/IMG_8030.JPG",
+  "originalSha256": "9db9d6a71429c87c56f409879b6511b7e4c756284807d21e53f16cbed001f9bb",
+  "processing": "cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients",
+  "bytes": 59610
+}

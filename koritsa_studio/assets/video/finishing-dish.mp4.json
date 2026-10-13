@@ -1,0 +1,15 @@
+{
+  "file": "video/finishing-dish.mp4",
+  "width": 720,
+  "height": 1280,
+  "duration": 7.0,
+  "source": "User-supplied media delivery copied 2026-10-12",
+  "original": "media/koritsa-2/Корица 2 фото/copy_B9415341-7A3F-4364-B0F9-4B59AC01D901.mov",
+  "originalSha256": "5611a2dc2437e093bdb668728519d77734256dba77a2cb7983bbd484a9c5b9d2",
+  "sourceRange": {
+    "start": 0,
+    "end": 7
+  },
+  "bytes": 856096,
+  "processing": "H.264 MP4, 720×1280, 30fps, CRF23, yuv420p, faststart; audio removed; single source sequence, repeated by site playback; no synthetic frames or retouching"
+}

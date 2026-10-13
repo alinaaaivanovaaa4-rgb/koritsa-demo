@@ -1,0 +1,13 @@
+{
+  "prompt": "SOURCE: media/koritsa-2/Корица 2 фото/DSC00017.JPG. cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients.",
+  "file": "new-media/salmon-serving-960.webp",
+  "width": 960,
+  "height": 1442,
+  "dish": "salmon-serving",
+  "menuItem": "almond-salmon",
+  "source": "User-supplied media delivery copied 2026-10-12",
+  "original": "media/koritsa-2/Корица 2 фото/DSC00017.JPG",
+  "originalSha256": "141a23b367755aa253f194c9daf44672436880b152200e18d3de49af0de77a18",
+  "processing": "cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients",
+  "bytes": 70534
+}

@@ -1,0 +1,15 @@
+{
+  "file": "video/coffee-pause.mp4",
+  "width": 720,
+  "height": 1280,
+  "duration": 6.333333,
+  "source": "User-supplied media delivery copied 2026-10-12",
+  "original": "media/koritsa-2/Корица 2 фото/copy_8869D069-DF60-4330-A5E9-70EB11796EE5.mov",
+  "originalSha256": "411d144440724e9f5b2b8b486a9482fbb5ce9fb2d96f4c2afc3f29e4b1ab2a15",
+  "sourceRange": {
+    "start": 0,
+    "end": null
+  },
+  "bytes": 710700,
+  "processing": "H.264 MP4, 720×1280, 30fps, CRF23, yuv420p, faststart; audio removed; single source sequence, repeated by site playback; no synthetic frames or retouching"
+}

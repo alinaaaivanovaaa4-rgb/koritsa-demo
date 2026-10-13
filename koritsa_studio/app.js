@@ -99,8 +99,9 @@
         start = undefined;
         if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.3) changeDish(Number(surface.dataset.dishSwipe), dx < 0 ? 1 : -1);
       });
-      surface.addEventListener('pointercancel', () => { start = undefined; });
+      surface.addEventListener('pointercancel', event => { if (start?.id === event.pointerId) start = undefined; });
       surface.addEventListener('pointerleave', event => { if (event.pointerType === 'mouse') start = undefined; });
+      window.addEventListener('blur', () => { start = undefined; });
     });
     layout.classList.add('has-dish-carousel');
     const activate = index => {
@@ -150,6 +151,15 @@
   const clear = document.querySelector('.search-clear');
   const note = document.querySelector('.drinks-note');
   const categoryRail = document.querySelector('.category-nav');
+  const categoryRailShell = document.querySelector('.category-nav-shell');
+  const updateCategoryRailCue = () => {
+    const maxScroll = categoryRail.scrollWidth - categoryRail.clientWidth;
+    categoryRailShell.classList.toggle('has-overflow', maxScroll > 2);
+    categoryRailShell.classList.toggle('has-scrolled', categoryRail.scrollLeft > 2);
+    categoryRailShell.classList.toggle('at-scroll-end', categoryRail.scrollLeft >= maxScroll - 2);
+  };
+  categoryRail.addEventListener('scroll', updateCategoryRailCue, { passive: true });
+  window.addEventListener('resize', updateCategoryRailCue, { passive: true });
   const params = new URLSearchParams(location.search);
   const normalize = value => value.toLocaleLowerCase('ru').replaceAll('ё', 'е').trim();
   let category = filters.some(filter => filter.dataset.categoryFilter === params.get('category')) ? params.get('category') : 'all';
@@ -199,6 +209,7 @@
     clear.hidden = !search.value;
     note.hidden = !sections.some(section => section.dataset.categorySection === 'drinks' && !section.hidden);
     revealActiveCategory();
+    updateCategoryRailCue();
   };
   const setCategory = (value, updateAddress = true) => {
     category = value;
@@ -230,16 +241,31 @@
   clear.addEventListener('click', reset);
   document.querySelector('.reset-search').addEventListener('click', reset);
   update();
-  document.fonts.ready.then(revealActiveCategory);
-  if (location.hash.startsWith('#menu-')) {
-    const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
-    if (target) {
-      const details = target.querySelector('details');
-      if (details) details.open = true;
-      document.fonts.ready.then(() => requestAnimationFrame(() => requestAnimationFrame(() => {
-        target.scrollIntoView({ block: 'start', behavior: 'instant' });
-        target.focus({ preventScroll: true });
-      })));
+  document.fonts.ready.then(() => {
+    revealActiveCategory();
+    updateCategoryRailCue();
+  });
+  const revealLinkedItem = () => {
+    if (!location.hash.startsWith('#menu-')) return;
+    let id;
+    try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+    const target = document.getElementById(id);
+    if (!target?.classList.contains('menu-item')) return;
+    if (target.hidden) {
+      search.value = '';
+      setCategory(target.dataset.category, false);
+      const url = new URL(location.href);
+      url.searchParams.set('category', category);
+      history.replaceState(null, '', url);
     }
-  }
+    const details = target.querySelector('details');
+    if (details) details.open = true;
+    document.fonts.ready.then(() => requestAnimationFrame(() => requestAnimationFrame(() => {
+      if (location.hash.slice(1) !== encodeURIComponent(id) && location.hash.slice(1) !== id) return;
+      target.scrollIntoView({ block: 'start', behavior: 'instant' });
+      target.focus({ preventScroll: true });
+    })));
+  };
+  window.addEventListener('hashchange', revealLinkedItem);
+  revealLinkedItem();
 })();

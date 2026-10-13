@@ -1,0 +1,13 @@
+{
+  "prompt": "SOURCE: media/koritsa-2/Корица 2 фото/IMG_8042.JPG. cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients.",
+  "file": "new-media/coffee-water-scene-1440.webp",
+  "width": 1440,
+  "height": 2163,
+  "dish": "coffee-water-scene",
+  "menuItem": null,
+  "source": "User-supplied media delivery copied 2026-10-12",
+  "original": "media/koritsa-2/Корица 2 фото/IMG_8042.JPG",
+  "originalSha256": "1de59fdefb4876412b192e78e71ca870789a42ad15f5e05d99bef8b7364d9017",
+  "processing": "cwebp resize only, quality 82, original ICC retained; no retouching or generated ingredients",
+  "bytes": 178032
+}

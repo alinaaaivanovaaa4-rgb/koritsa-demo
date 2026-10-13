@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="only light">
+  <meta name="theme-color" content="#fffef2">
+  <meta name="description" content="Меню Корицы в Telegram: блюда, напитки и кофейни в Прохладном.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://telegram.org; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'">
+  <title>Корица — меню</title>
+  <link rel="stylesheet" href="arrival.css?v=de024147fdd9">
+  <script src="arrival.js?v=a548be32ae20" defer></script>
+  <script id="telegram-sdk" src="https://telegram.org/js/telegram-web-app.js?64" async></script>
+  <link rel="stylesheet" href="app.css?v=b4f44441dfff">
+  <link rel="preload" href="../assets/fonts/onest-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="search.js?v=c3a5481bd0ed" defer></script>
+  <script src="app.js?v=b1bdec443b88" defer></script>
+</head>
+<body>
+  <section class="mini-arrival" id="mini-arrival" role="dialog" aria-modal="true" aria-labelledby="arrival-title">
+    <div class="arrival-top"><img src="../assets/brand/wordmark-olive.svg" width="112" height="32" alt="Корица"><button id="arrival-skip">К меню <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button></div>
+    <div class="arrival-middle"><h2 id="arrival-title">Сейчас будет<br><span>хорошо.</span></h2><p>Кофе, еда и время для себя.</p><div class="arrival-scene" aria-hidden="true"><div class="arrival-beans"></div><img class="arrival-plate arrival-savory" src="../assets/intro/plates/shrimp-orzo-cutout.webp" width="768" height="512" alt="" fetchpriority="low"><img class="arrival-plate arrival-sweet" src="../assets/intro/plates/cherry-syrniki-cutout.webp" width="768" height="512" alt="" fetchpriority="low"><img class="arrival-mark" src="../assets/brand/mark-olive.svg" width="88" height="88" alt=""></div></div>
+    <div class="arrival-bottom"><span>кофе · еда · пауза</span><span id="arrival-status" role="status" aria-atomic="true">Открываем меню</span></div>
+  </section>
+  <a class="skip-link" href="#content">Перейти к меню</a>
+  <div class="app-shell">
+    <header class="app-header">
+      <a class="brand" href="#view=menu" aria-label="Корица — меню"><img class="brand-mark" src="../assets/brand/mark-olive.svg" width="36" height="36" alt=""><img class="brand-name" src="../assets/brand/wordmark-olive.svg" width="116" height="34" alt="Корица"></a>
+      <span class="city">Прохладный</span>
+    </header>
+    <button class="cafe-context" id="cafe-context" data-view="cafes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span id="cafe-context-label">Выбрать кофейню</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+    <p id="catalog-status" class="catalog-status" role="status" hidden></p>
+    <main id="content">
+      <div class="load-state" id="load-state" role="status"><p>Собираем меню…</p><span>Кофе, еда и ваша пауза.</span></div>
+      <section id="menu-view" class="view" hidden aria-labelledby="menu-title">
+        <div class="page-heading"><h1 id="menu-title">Что вам сегодня?</h1><span class="heading-count" id="total-count"></span></div>
+        <form class="search" role="search" id="search-form"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><label class="sr-only" for="search-input">Блюдо или ингредиент</label><input id="search-input" type="search" placeholder="Блюдо или ингредиент" autocomplete="off" maxlength="120"><button type="button" id="clear-search" class="icon-button" aria-label="Очистить поиск" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form>
+        <div class="category-bar"><nav class="categories" id="categories" aria-label="Категории меню"></nav></div>
+        <p id="search-note" class="search-note" role="status" hidden></p><div class="section-heading"><h2 id="list-title">Завтраки</h2><span id="results-count" aria-live="polite"></span></div>
+        <div id="menu-list" class="menu-grid"></div>
+        <div class="empty-state" id="search-empty" hidden><h2>Пока ничего не нашлось</h2><p>Попробуйте «сырники», «лосось» или «капучино». Можно вернуться ко всему меню.</p><button class="text-button" id="reset-filters">Показать всё меню <span aria-hidden="true">→</span></button></div>
+        <p class="catalog-note">Наличие и состав уточняйте в кофейне.</p>
+      </section>
+      <section id="choose-view" class="view" hidden aria-labelledby="choose-title"><div class="page-heading"><h1 id="choose-title">Найдём ваше.</h1></div><p class="page-intro">Несколько предпочтений — и варианты из нашего меню.</p><div id="picker"></div></section>
+      <section id="favorites-view" class="view" hidden aria-labelledby="favorites-title"><div class="page-heading"><h1 id="favorites-title">На потом.</h1><span class="heading-count" id="favorites-count"></span></div><p class="page-intro">Любимые блюда и то, что хочется попробовать.</p><div id="favorites-list" class="menu-grid"></div><div id="favorites-empty" class="empty-state" hidden><svg class="empty-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 4.8a5.4 5.4 0 0 0-7.6 0L12 5.7l-.9-.9a5.4 5.4 0 0 0-7.6 7.6L12 21l8.5-8.6a5.4 5.4 0 0 0 0-7.6Z"/></svg><h2>Здесь будет ваше любимое</h2><p>Нажмите на сердечко рядом с блюдом. Список сохранится на этом устройстве.</p><button class="primary-button" data-view="menu">Выбрать в меню</button></div></section>
+      <section id="cafes-view" class="view" hidden aria-labelledby="cafes-title"><div class="page-heading"><h1 id="cafes-title">Встретимся<br>в «Корице».</h1></div><p class="page-intro">Три кофейни в Прохладном.<br>Выберите удобный адрес.</p><div id="locations"></div><p class="catalog-note">Маршрут откроется в Яндекс Картах. Меню общее; наличие блюд уточняйте в выбранной кофейне.</p></section>
+    </main>
+  </div>
+  <nav class="bottom-nav" aria-label="Навигация приложения">
+    <button data-view="menu" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5"/></svg><span>Меню</span></button>
+    <button data-view="choose"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.2 6.8L21 12l-6.8 2.2L12 21l-2.2-6.8L3 12l6.8-2.2Z"/></svg><span>Подбор</span></button>
+    <button data-view="favorites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 4.8a5.4 5.4 0 0 0-7.6 0L12 5.7l-.9-.9a5.4 5.4 0 0 0-7.6 7.6L12 21l8.5-8.6a5.4 5.4 0 0 0 0-7.6Z"/></svg><span>Избранное</span><small id="favorite-badge" hidden></small></button>
+    <button data-view="cafes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Кофейни</span></button>
+  </nav>
+  <dialog id="dish-dialog" aria-labelledby="dish-title"><div class="dish-sheet"><div class="sheet-top"><span id="dish-category"></span><button class="icon-button" id="close-dish" aria-label="Закрыть блюдо"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div id="dish-photo" class="dish-photo"></div><div class="dish-content"><div class="dish-title-row"><h2 id="dish-title"></h2><button class="icon-button favorite" id="dish-favorite" aria-label="Добавить в избранное" aria-pressed="false"></button></div><div class="dish-meta"><strong id="dish-price"></strong><span id="dish-weight"></span></div><h3 class="description-heading">Внутри блюда</h3><p id="dish-description"></p><p id="price-note" class="quiet-note" hidden>Цена зависит от варианта напитка. Объём уточняйте в кофейне.</p><p class="allergy-note">При аллергии уточните полный состав и возможные следы аллергенов у сотрудника кофейни.</p><p class="quiet-note" id="dish-cafe-context"></p><button class="primary-button" id="dish-cafes">Выбрать кофейню</button></div></div></dialog>
+  <p class="toast" id="toast" role="status" aria-live="polite" hidden></p>
+  <noscript><p class="noscript">Для приложения нужен JavaScript. <a href="menu.html">Открыть простое меню</a>.</p></noscript>
+</body>
+</html>
