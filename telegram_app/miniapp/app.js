@@ -24,10 +24,13 @@
   const dialog = $('#dish-dialog');
 
   function theme() {
-    root.dataset.theme = tg?.colorScheme === 'dark' ? 'dark' : 'light';
+    // Keep the café's cream palette even when Telegram uses a dark theme.
+    root.dataset.theme = 'light';
     if (!inTelegram) return;
     const bg = getComputedStyle(root).getPropertyValue('--bg').trim();
-    try { tg.setHeaderColor?.(bg); tg.setBackgroundColor?.(bg); tg.setBottomBarColor?.(bg); } catch { /* Older clients keep their native colors. */ }
+    for (const method of ['setHeaderColor', 'setBackgroundColor', 'setBottomBarColor']) {
+      try { tg[method]?.(bg); } catch { /* Unsupported chrome methods must not block the others. */ }
+    }
   }
   function safeArea() {
     for (const side of ['top', 'bottom', 'left', 'right']) {
